@@ -12,6 +12,7 @@
 * [Portfolio](platform/portfolio.md)
 * [Swap](platform/swap.md)
 * [Referral Program](platform/referrals.md)
+* [Communities](platform/communities.md)
 
 ## Trading
 
@@ -39,6 +40,7 @@
 ## Legal
 
 * [Terms of Service](terms.md)
+* [Community Terms](legal/community-terms.md)
 * [Privacy Policy](privacy.md)
 
 ## Others
