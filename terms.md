@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0  ·  **Last updated:** July 12, 2026
 
-These Terms of Service ("Terms") govern your access to and use of the Bitnex interface at bitnex.pro (the "Interface", "Bitnex", "we", "us", or "our"). The Interface is a non-custodial front-end that lets you access decentralized trading on Hyperliquid. By connecting a wallet and using the Interface, you agree to these Terms.
+These Terms of Service ("Terms") govern your access to and use of the Bitnex interface at bitnex.pro (the "Interface", "Bitnex", "we", "us", or "our"). The Interface is a non-custodial front-end that lets you access decentralized trading on a third-party decentralized exchange protocol (the "Protocol"). By connecting a wallet and using the Interface, you agree to these Terms.
 
 ## 1. Acceptance of Terms
 
@@ -23,7 +23,7 @@ You may not use any technology (such as a VPN) to circumvent these eligibility r
 
 ## 3. Non-Custodial Nature
 
-The Interface is **only a front-end**. It does not hold, custody, or control your funds at any time. All trading, order matching, custody, and settlement take place on **Hyperliquid's on-chain system**, not on Bitnex.
+The Interface is **only a front-end**. It does not hold, custody, or control your funds at any time. All trading, order matching, custody, and settlement take place on **the Protocol's on-chain system**, not on Bitnex.
 
 - You retain control of your funds and your keys at all times.
 - We cannot access, move, freeze, or withdraw your funds.
@@ -40,14 +40,14 @@ Trading crypto assets, and especially **leveraged** trading, involves substantia
 - You may **lose some or all of your deposited funds and margin**.
 - Leveraged positions can be **liquidated**, and prices can move sharply and unpredictably.
 - Crypto assets are volatile, and past performance is not indicative of future results.
-- There are technical risks, including smart-contract risk, network congestion, bugs, and the risk that third-party services (including Hyperliquid) fail, are attacked, or become unavailable.
+- There are technical risks, including smart-contract risk, network congestion, bugs, and the risk that third-party services (including the Protocol) fail, are attacked, or become unavailable.
 - You are responsible for the security of your wallet, keys, and devices.
 
 **Only trade with funds you can afford to lose.**
 
 ## 6. Fees
 
-Bitnex charges a fee on trades placed through the Interface. The applicable fee is displayed in the **Order Details** before you confirm a trade. Hyperliquid charges its own separate trading fees. By placing a trade, you agree to the fees shown at that time.
+Bitnex charges a fee on trades placed through the Interface. The applicable fee is displayed in the **Order Details** before you confirm a trade. The Protocol charges its own separate trading fees. By placing a trade, you agree to the fees shown at that time.
 
 ## 7. Prohibited Use
 
@@ -86,7 +86,7 @@ The Interface is provided **"as is" and "as available"**, without warranties of 
 
 ## 11. Limitation of Liability
 
-To the maximum extent permitted by applicable law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, funds, data, or goodwill, arising out of or relating to your use of (or inability to use) the Interface — including trading losses, liquidations, or the acts, failures, or unavailability of any third party such as Hyperliquid.
+To the maximum extent permitted by applicable law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, funds, data, or goodwill, arising out of or relating to your use of (or inability to use) the Interface — including trading losses, liquidations, or the acts, failures, or unavailability of any third party such as the Protocol.
 
 ## 12. Changes to These Terms
 

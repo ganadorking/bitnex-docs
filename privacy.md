@@ -2,9 +2,9 @@
 
 **Last updated:** July 12, 2026
 
-This Privacy Policy explains how the Bitnex interface ("Bitnex", "we", "us", or "our") handles information when you use bitnex.pro to access decentralized trading on Hyperliquid.
+This Privacy Policy explains how the Bitnex interface ("Bitnex", "we", "us", or "our") handles information when you use bitnex.pro to access decentralized trading on a third-party decentralized exchange protocol (the "Protocol").
 
-Bitnex is a **non-custodial trading interface**. We are the front-end; the trading, matching, custody and settlement of your funds happen on Hyperliquid's on-chain system. Because of this design, we deliberately collect as little information as possible.
+Bitnex is a **non-custodial trading interface**. We are the front-end; the trading, matching, custody and settlement of your funds happen on the Protocol's on-chain system. Because of this design, we deliberately collect as little information as possible.
 
 ## The short version
 
@@ -16,7 +16,7 @@ Bitnex is a **non-custodial trading interface**. We are the front-end; the tradi
 ## What we do NOT collect
 
 - **Names, government IDs, or KYC documents.** Bitnex does not verify your identity.
-- **Custody of your funds.** Funds are held by Hyperliquid's on-chain system, never by Bitnex.
+- **Custody of your funds.** Funds are held by the Protocol's on-chain system, never by Bitnex.
 - **Private keys or seed phrases.** We never ask for, receive, or store the keys that control your funds.
 
 {% hint style="info" %}
@@ -39,7 +39,7 @@ We do not use this information to build advertising profiles, and we do not sell
 
 Bitnex is an interface built on top of infrastructure and services provided by others. When you use Bitnex, some information is necessarily processed by these third parties under their own terms and privacy policies:
 
-- **Hyperliquid** — the decentralized exchange that provides liquidity, order matching, custody and settlement. Your trades, positions and balances live on Hyperliquid's on-chain system.
+- **The underlying exchange protocol** — the decentralized exchange that provides liquidity, order matching, custody and settlement. Your trades, positions and balances live on its on-chain system.
 - **Privy** — provides authentication and embedded wallets when you log in with email or Google.
 - **Cloudflare** — provides content delivery, security, and geo-location used for eligibility and geo-restriction.
 - **A database provider** — used to store your signed Terms of Service acceptance record.
@@ -60,7 +60,7 @@ You can manage or clear cookies and local storage through your browser settings.
 
 ## On-chain data is public and permanent
 
-Trading on Hyperliquid happens on a public blockchain. Transactions, orders, positions, deposits and withdrawals, and the signatures you make (including Terms acceptance and agent-wallet approvals) may be **publicly visible and permanent**. This on-chain data cannot be edited or deleted by us or by anyone, and it may be linked to your wallet address.
+Trading happens on a public blockchain. Transactions, orders, positions, deposits and withdrawals, and the signatures you make (including Terms acceptance and agent-wallet approvals) may be **publicly visible and permanent**. This on-chain data cannot be edited or deleted by us or by anyone, and it may be linked to your wallet address.
 
 {% hint style="warning" %}
 Anything recorded on-chain is outside our control and cannot be removed. Consider this before you transact.
