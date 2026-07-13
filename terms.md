@@ -1,10 +1,6 @@
 # Terms of Service
 
-{% hint style="danger" %}
-**Template — not legal advice.** This document is a starting template. It must be reviewed, completed, and adapted by a qualified lawyer before you rely on it or publish it. It does not constitute legal advice and may not reflect the requirements of your jurisdiction. Placeholders in _[brackets]_ must be completed.
-{% endhint %}
-
-**Version:** 1.0.0  ·  **Last updated:** _[INSERT DATE]_
+**Version:** 1.0.0  ·  **Last updated:** July 12, 2026
 
 These Terms of Service ("Terms") govern your access to and use of the Bitnex interface at bitnex.pro (the "Interface", "Bitnex", "we", "us", or "our"). The Interface is a non-custodial front-end that lets you access decentralized trading on Hyperliquid. By connecting a wallet and using the Interface, you agree to these Terms.
 
@@ -65,22 +61,41 @@ You agree not to use the Interface to:
 
 We may restrict or block access to the Interface where we believe these Terms are being violated.
 
-## 8. No Warranties
+## 8. Referral Program
+
+Bitnex may offer a referral program that lets you share a referral code or link and earn a share of the trading fees paid by users you refer; referred users may receive a fee discount. By participating, you agree that:
+
+- Reward rates, eligibility rules and payout mechanics are those shown in the app and may change at any time.
+- Creating a referral code may require meeting conditions set by the underlying protocol (such as a minimum trading volume).
+- Self-referrals, fake or duplicate accounts, spam, or any abuse of the program are prohibited and may result in forfeiture of rewards and removal from the program.
+- Referral rewards are not guaranteed income and depend in part on protocol-level mechanics outside our control.
+
+## 9. Vaults, Staking and Other Features
+
+The Interface may provide access to additional on-chain features of the underlying protocol, such as vaults, staking, swaps and automated strategies (for example, grid bots). These features:
+
+- are executed by the underlying protocol on-chain, not by Bitnex;
+- involve risk of loss — including loss of deposited funds — and past performance is not indicative of future results; and
+- may be subject to protocol-level rules (such as lock-ups, withdrawal timing and minimum amounts) shown in the app.
+
+You use these features at your own risk.
+
+## 10. No Warranties
 
 The Interface is provided **"as is" and "as available"**, without warranties of any kind, whether express or implied. We do not warrant that the Interface will be uninterrupted, error-free, secure, or that any information displayed is accurate, complete, or current. Your use of the Interface is at your own risk.
 
-## 9. Limitation of Liability
+## 11. Limitation of Liability
 
 To the maximum extent permitted by applicable law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, funds, data, or goodwill, arising out of or relating to your use of (or inability to use) the Interface — including trading losses, liquidations, or the acts, failures, or unavailability of any third party such as Hyperliquid.
 
-## 10. Changes to These Terms
+## 12. Changes to These Terms
 
 We may update these Terms from time to time. When we do, we will publish the new version with an updated version number and date, and — where appropriate — ask you to accept the new version by signing again. Your continued use of the Interface after the changes take effect means you accept the updated Terms.
 
-## 11. Governing Law and Dispute Resolution
+## 13. Governing Law and Dispute Resolution
 
-_[PLACEHOLDER — to be completed by legal counsel. Specify the governing law, the venue/forum or arbitration rules for disputes, any class-action waiver, and any other jurisdiction-specific provisions appropriate for your situation.]_
+Any dispute arising out of or relating to these Terms or your use of the Interface shall be resolved on an individual basis. Before pursuing any formal action, you agree to first contact us and attempt to resolve the matter informally.
 
-## 12. Contact
+## 14. Contact
 
-If you have questions about these Terms, contact us at _[INSERT CONTACT EMAIL / METHOD]_.
+If you have questions about these Terms, contact us through the in-app support chat at [bitnex.pro](https://bitnex.pro) or via the channels listed in [Official Links](others/official-links.md).

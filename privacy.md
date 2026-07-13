@@ -1,10 +1,6 @@
 # Privacy Policy
 
-{% hint style="danger" %}
-**Template — not legal advice.** This Privacy Policy is a starting template and must be reviewed and adapted by a qualified lawyer before you rely on it or publish it. It does not constitute legal advice and may not reflect the requirements of your jurisdiction.
-{% endhint %}
-
-**Last updated:** _[INSERT DATE]_
+**Last updated:** July 12, 2026
 
 This Privacy Policy explains how the Bitnex interface ("Bitnex", "we", "us", or "our") handles information when you use bitnex.pro to access decentralized trading on Hyperliquid.
 
@@ -34,6 +30,7 @@ To operate the interface and meet our eligibility obligations, we may process:
 - **Wallet and public addresses** — the address you connect or the embedded wallet address created for you, and the on-chain "agent wallet" (session key) used to place orders without a pop-up on every trade.
 - **Your Terms acceptance record** — when you first connect, you accept our Terms of Service by signing a message with your wallet. We store the signed record (including the address, the Terms version accepted, and a timestamp) for compliance purposes.
 - **Approximate country from your IP address** — used to enforce eligibility and geo-restrictions. Bitnex is not available to U.S. persons or to persons located in restricted or sanctioned jurisdictions.
+- **Referral codes** — if you join through a referral link or create/set a referral code, we process that code association to attribute rewards and discounts.
 - **Basic analytics and technical logs** — such as pages/features used, device and browser type, and error and performance data, so we can keep the interface working and secure.
 
 We do not use this information to build advertising profiles, and we do not sell your personal information.
@@ -90,4 +87,4 @@ We may update this Privacy Policy from time to time. When we do, we will revise 
 
 ## Contact
 
-If you have questions about this Privacy Policy or how the Bitnex interface handles information, contact us at _[INSERT CONTACT EMAIL / METHOD]_.
+If you have questions about this Privacy Policy or how the Bitnex interface handles information, contact us through the in-app support chat at [bitnex.pro](https://bitnex.pro) or via our official channels.
