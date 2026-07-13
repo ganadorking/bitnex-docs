@@ -1,102 +1,98 @@
 # Getting Started
 
-Welcome to Bitnex. This guide walks you through everything you need to place your first trade — from connecting a wallet to managing your positions. The whole setup takes just a few minutes.
+Welcome to Bitnex. This guide walks you through everything you need to go from zero to your first trade: connecting a wallet, enabling trading, funding your account, and managing your first position.
 
-Bitnex is a non-custodial trading interface for perpetual futures and spot, built on top of Hyperliquid. That means Hyperliquid provides the liquidity, matching engine, and on-chain custody, while Bitnex gives you a fast, clean interface to trade. There's no traditional sign-up and no KYC on Bitnex itself.
+Bitnex is a **non-custodial** trading platform for perpetual futures and spot markets, built on top of a high-performance decentralized exchange protocol. The underlying protocol provides the on-chain order book, matching, custody and settlement — Bitnex gives you a fast, polished interface to trade on it. There is no traditional sign-up and no KYC on Bitnex, and once set up, trading is gasless.
 
-{% hint style="info" %}
-**Your funds stay yours.** Bitnex never holds your money. Deposits live in Hyperliquid's on-chain system, under your own control — not with Bitnex.
-{% endhint %}
-
-## Before you begin
-
-Bitnex is **not available to U.S. persons** or to anyone located in a restricted or sanctioned jurisdiction. Access is geo-restricted, and during setup you'll be asked to confirm — by signing a message — that you are not a U.S. person.
-
-## 1. Connect
-
-Head to [bitnex.pro](https://bitnex.pro) and choose how you want to connect:
-
-- **With a crypto wallet** — MetaMask, Coinbase Wallet, or Rainbow.
-- **With email or Google** — this creates an embedded wallet for you automatically (via Privy), so you can get started without installing a wallet extension.
-
-Either option gives you a wallet that Bitnex uses to interact with Hyperliquid on your behalf.
-
-## 2. Accept the Terms
-
-The first time you connect, you'll be asked to accept the Bitnex Terms of Service. You do this by **signing a message with your wallet** — this signature is recorded for compliance purposes.
-
-- No gas fee is charged for signing.
-- Signing the Terms also confirms that you are not a U.S. person.
-
-{% hint style="info" %}
-The current Terms of Service version is **1.0.0**. Signing is a one-time step unless the Terms are updated.
-{% endhint %}
-
-## 3. Enable Trading
-
-Next, click **Enable Trading**. This is a one-time setup that lets you trade smoothly, without a wallet popup on every single order.
-
-When you enable trading, you approve a set of one-time signatures that create an **agent wallet** — a session key that can place orders on your behalf. These approvals are signed on the **Arbitrum** network.
-
-Why this matters:
-
-- **Sign once, trade freely.** After this step, you place orders without a wallet popup each time. Trading is gasless once you're set up.
-- **The agent key can't touch your funds.** It can place and manage orders, but it **cannot withdraw** anything.
-- **You stay in control.** You can revoke the agent session at any time.
+![The Bitnex trading terminal](.gitbook/assets/trade-terminal.png)
 
 {% hint style="success" %}
-This is the step that makes Bitnex feel fast. Approve once, then trade freely with no interruptions.
+**Your funds never leave your control.** Assets are held by the underlying protocol's on-chain system — never by Bitnex. You can withdraw at any time without asking anyone's permission.
 {% endhint %}
 
-## 4. Deposit USDC
+## Step 1 — Connect
 
-To trade, you'll need USDC in your Hyperliquid account. From inside the app, you can **bridge USDC from Arbitrum to Hyperliquid** in a few clicks.
+Click **Connect** in the top-right corner of the app. You can connect in two ways:
 
-- Deposits move from Arbitrum into Hyperliquid's on-chain system.
-- Your balance appears in Bitnex once the bridge completes.
-- When you want to take funds out, **withdrawals go back to Arbitrum**.
+* **Crypto wallet** — MetaMask, Coinbase Wallet, Rainbow and other popular wallets are supported.
+* **Email or Google** — no wallet? Sign in with email or Google and Bitnex creates an embedded **self-custodial** wallet for you via Privy. You keep control of it; it works like any other wallet.
+
+Either way, there is no account registration form and no KYC process on Bitnex.
+
+## Step 2 — Accept the Terms
+
+On your first connection, you'll be asked to sign a message with your wallet. This signature:
+
+* Confirms you accept the [Terms of Service](terms.md) (v1.0.0).
+* Confirms you are **not a U.S. person**.
+
+Signing this message is free — it's an off-chain signature, not a transaction, and costs no gas.
 
 {% hint style="warning" %}
-Make sure you're bridging **USDC on Arbitrum**. Double-check the network before you send.
+Bitnex is **not available** to U.S. persons or to residents of restricted or sanctioned jurisdictions. See the [Terms of Service](terms.md) for details.
 {% endhint %}
 
-## 5. Place your first trade
+## Step 3 — Enable Trading
 
-With funds deposited, you're ready to trade. Here's the flow:
+Next, click **Enable Trading**. This is a one-time setup that makes trading fast and popup-free:
 
-1. **Pick a market.** Choose a perpetual futures market or a spot market.
-2. **Choose a side.** Select **Buy** (long) or **Sell** (short).
-3. **Set your size.** Enter how much you want to trade.
-4. **Set leverage (perps only).** For perpetual futures, choose your leverage. Spot trades don't use leverage.
-5. **Review the Order Details.** Before you confirm, Bitnex shows you the full order breakdown — including fees.
-6. **Place the order.** Confirm to send it to Hyperliquid.
+* You sign a small set of one-time approvals on the **Arbitrum** network.
+* These approvals create an **agent wallet** (a session key) that signs your orders automatically in the background — no wallet confirmation popup for every trade.
+* The agent key is strictly limited: it **cannot withdraw funds**, and you can **revoke it at any time** from the app.
+
+This is why trading on Bitnex feels as fast as a centralized exchange while remaining fully self-custodial. For a detailed walkthrough, see [Enable Trading](guides/enable-trading.md).
 
 {% hint style="info" %}
-**On fees:** Bitnex charges a small fee on top of Hyperliquid's standard trading fees. The exact amount is always shown in the **Order Details** before you place a trade — so there are never any surprises.
+Brand-new account? If you click **Enable Trading** while your account is still empty, the app will first ask you to make your first deposit (Step 4) and then finish the setup automatically.
 {% endhint %}
 
-## 6. Manage your positions
+## Step 4 — Deposit USDC
 
-Once you're trading, everything you need to stay on top of your activity is built in:
+Fund your trading account from inside the app:
 
-- **Positions** — see your open positions, size, entry price, and live P&L.
-- **Open Orders** — view and cancel orders that haven't filled yet.
-- **History** — review your past trades and fills.
-- **Close / TP-SL** — close a position at any time, or set a **Take Profit** and **Stop Loss** to manage risk automatically.
+1. Click **Deposit**.
+2. Bridge **USDC from Arbitrum** into your trading account. The whole flow happens in the app.
+3. Once the deposit confirms, your balance appears in your account — it is **unified across perps and spot**, so one balance serves both.
 
-## Lite vs Pro
+Withdrawals work the same way in reverse: USDC is sent back to your wallet on Arbitrum. See [Funding Your Account](platform/funding-account.md) for the full flow.
 
-Bitnex offers two ways to view the market, and you can switch between them anytime:
+{% hint style="warning" %}
+**Deposit USDC on the Arbitrum network only.** Sending other tokens, or USDC on a different network, may result in loss of funds.
+{% endhint %}
 
-- **Lite** — a simple, streamlined view for placing trades quickly.
-- **Pro** — the full trading terminal, with candlestick and line charts, the order book, positions, open orders, and history all in one place.
+## Step 5 — Place your first trade
 
-Beyond trading, you'll also find **Portfolio**, **Vaults/Earn**, **Staking**, **Referrals**, and **Swap** inside the app.
+You're ready to trade. Pick the view that suits you — you can switch anytime:
+
+* **Lite** — a simple, streamlined interface: price chart, Buy/Sell, amount, leverage, and optional take-profit / stop-loss. Great for getting started. See [Lite Mode](platform/lite-mode.md).
+* **Pro** — the full terminal: candlestick chart, live order book, recent trades, advanced order types, and detailed account tabs. See [The Trading Interface](trading/interface.md).
+
+A simple first trade:
+
+1. Select a market (e.g. BTC).
+2. Choose **Buy/Long** or **Sell/Short**.
+3. Enter your size and, for perps, set your leverage.
+4. Review **Order Details** — estimated cost, fees, and estimated liquidation price are all shown **before** you confirm.
+5. Place the order. No wallet popup — your agent wallet signs it instantly.
 
 {% hint style="info" %}
-**Remember:** at every step, your funds remain non-custodial. Bitnex is the interface; Hyperliquid holds custody on-chain, and only you can withdraw.
+**Fees are always shown up front.** The exact cost of every trade appears in Order Details before you place it, and your current fee tier is visible on the [Fees](platform/fees.md) page and in the fee row of every order form.
+{% endhint %}
+
+## Step 6 — Manage your positions
+
+Once you have an open position:
+
+* Track it in the **Positions** tab — entry price, mark price, unrealized PnL, margin, and estimated liquidation price.
+* Attach or edit a **take-profit / stop-loss** on the position at any time — full or partial size, price-based or %-based. See [Take Profit & Stop Loss](trading/tp-sl.md).
+* Close part or all of the position whenever you like; realized PnL is booked on close.
+* Review everything in [Portfolio](platform/portfolio.md): total equity, PnL over time, balances, and your deposits & withdrawals ledger.
+
+{% hint style="danger" %}
+Leveraged trading carries real risk. If your margin falls below the maintenance requirement, your position will be liquidated by the protocol. Size positions sensibly and use stop losses — see [Liquidation](trading/liquidation.md).
 {% endhint %}
 
 ## Next steps
 
-- Still have questions? Head over to the [FAQ](faq.md).
+* Explore the full terminal in [The Trading Interface](trading/interface.md).
+* Have questions? Check the [FAQ](faq.md).
