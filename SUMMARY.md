@@ -13,6 +13,7 @@
 * [Swap](platform/swap.md)
 * [Referral Program](platform/referrals.md)
 * [Communities](platform/communities.md)
+* [Copy Trading](platform/copy-trading.md)
 * [Guardian Mode](platform/guardian-mode.md)
 
 ## Trading
