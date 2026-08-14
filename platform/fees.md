@@ -89,3 +89,13 @@ No special surcharge — each sub-order or slice is charged as a normal fill at 
 Tiers don't reset on a calendar schedule — they follow your rolling 14-day volume continuously, moving up or down as your volume changes.
 
 For anything not covered here, check the [FAQ](../faq.md) or the Fees page in the app.
+
+
+## Outcome (prediction) markets — from Aug 16, 2026
+
+Following Hyperliquid's HIP-4 network upgrade, outcome markets charge protocol fees configured by each market's deployer:
+
+- **Opening a position is free** — the protocol fee is charged **only when you close or get liquidated**.
+- The average outcome fee is **about half** of a regular market's (for example, a Tier-0 taker pays ~0.07% on close).
+- The exact scale is set per market by its deployer.
+- The Bitnex platform fee applies per order as usual and is always shown in the order form before you confirm.
