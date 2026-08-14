@@ -12,11 +12,18 @@ Guardian Mode lets you set your own risk limits, and Bitnex enforces them **befo
 
 ## Turning it on
 
-Guardian Mode has its own page at **/guardian**. Open it and flip the switch in the header.
+Guardian Mode has its own page at **/guardian**. Activation is a short wizard — nothing turns on until the last step:
 
-The first time you enable it, Bitnex fills in a conservative starting point: 10× max leverage, 2% risk per trade, 5% daily loss, 10% weekly loss, 20% max drawdown, 10 trades per day, 15-minute pause after a loss, and a 3-loss streak limit. Adjust any of them to your own style.
+1. **Pick a risk profile** — Conservative, Balanced, or Aggressive. The profile fills in every limit; you can fine-tune them next.
+2. **Adjust the key limits** — max leverage, risk per trade, daily loss, losing streak.
+3. **Choose your unlock delay** — written **in days**, from 1 to 365. This is how long any future loosening will wait.
+4. **Review the summary, accept the terms, and sign with your wallet.** The signature records the limits you chose; without it, nothing activates.
 
-Each rule has its own switch, separate from its value: turning a rule off and setting its number are two different gestures, so you never have to type a zero into a risk field to disable it.
+At that moment Guardian freezes your **starting capital** — the account value at activation — and measures your maximum drawdown against it, like a funding-firm account. The chart on the page draws your equity from that starting point against the exact lines where Guardian will block new orders, and the **Capital targets** section translates each percentage into dollars: the threshold where the block triggers and how much room you have left.
+
+Configuration is **per wallet**: each account you connect has its own Guardian, its own limits, and its own signature.
+
+After activation, the page shows your parameters as a plain list — rule and value, exactly as configured. Tap any number to change it (a value of 0 disables that rule). Tightening applies instantly; loosening waits for your unlock delay.
 
 ## The limits
 
@@ -26,12 +33,10 @@ Each rule has its own switch, separate from its value: turning a rule off and se
 | **Max risk per trade** | Blocks the order if hitting your stop would cost more than this share of your account | Distance between entry and your stop, times leverage |
 | **Daily loss** | Once you're down this much today, no new positions | Your equity curve since local midnight |
 | **Weekly loss** | Same, over the week starting Monday | Your equity curve since Monday |
-| **Max drawdown** | Blocks while your account sits this far below its all-time peak | Your full equity history |
+| **Max drawdown** | Blocks while your account sits this far below your starting capital | The capital frozen at activation (or your peak, for configs created before this existed) |
 | **Trades per day** | Caps how many positions you open in a day. Closes never count | Your fills since local midnight |
 | **Pause after a loss** | Forced wait after any losing close | Timestamp of your last losing fill |
 | **Losing streak** | Stops you after N losses in a row | Consecutive losing closes, most recent first |
-| **Allowed hours** | Outside your window you can only close, not open | Your device's local clock |
-| **Allowed days** | Same, by weekday | Your device's local clock |
 | **Extreme volatility** | Blocks markets that moved more than this in 24h | The market's 24h change |
 
 ### Notes on how these are measured
@@ -42,14 +47,12 @@ Each rule has its own switch, separate from its value: turning a rule off and se
 
 **The losing streak resets each day.** It blocks only while your most recent loss is from today. Otherwise the block would be permanent: a streak only ends with a win, and you can't win if you can't trade. The rule means "stop for today and review", not "you're out for good".
 
-**Hours use your device's clock**, so they follow you across time zones. A window can cross midnight (22 → 06 works).
-
 ## The unlock delay
 
 This is the part that makes Guardian actually work.
 
-- **Tightening a limit is immediate.** Lowering a cap, shortening your hours, or turning a rule back on applies the moment you save it.
-- **Loosening a limit waits.** Raising a cap, removing a rule, or switching Guardian off does not take effect until your unlock delay has passed (24 hours by default).
+- **Tightening a limit is immediate.** Lowering a cap or turning a rule back on applies the moment you save it.
+- **Loosening a limit waits.** Raising a cap, removing a rule, or switching Guardian off does not take effect until your unlock delay has passed — the delay you wrote in days (1–365) when you activated, adjustable like any other rule.
 
 Without this, the first time a limit gets in your way — down on the day, wanting to make it back — you'd switch it off in two clicks and the feature would be decoration.
 

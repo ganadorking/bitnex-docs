@@ -32,7 +32,7 @@ Copies are **proportional**: if the trader risks 10% of their equity on a trade,
 | --- | --- |
 | **Max leverage** (1–40×) | Your copies mirror the trader's leverage up to this cap, and your copied position never exceeds allocation × leverage. |
 | **Max entry deviation** (1–20% or unlimited) | If by the time your copy executes the price has already moved against you by more than this percentage versus the trader's entry, that copy is skipped. *Does not apply when seeding already-open positions.* |
-| **Loss protection** (−10 / −25 / −50%) | If the copy (only what the engine opened) loses that share of your allocation between realized and unrealized PnL, the copied positions are closed and the copy pauses automatically. |
+| **Auto-stop on loss** (−10 / −25 / −50%) | If the copy (only what the engine opened) loses that share of your allocation between realized and unrealized PnL, it **closes the copied positions and stops** — it is a full stop, not a pause: nothing is copied again until you start it back. Your own positions are never touched. |
 | **Assets** | Copy every market the trader touches, or only the ones you select. |
 | **Copy already-open positions** | On start, opens the trader's current positions proportionally **at the current price**. |
 

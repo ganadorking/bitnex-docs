@@ -42,6 +42,9 @@
 ## Legal
 
 * [Terms of Service](terms.md)
+* [Risk Disclosure](legal/risk-disclosure.md)
+* [Copy Trading Terms](legal/copy-trading-terms.md)
+* [Guardian Mode Terms](legal/guardian-terms.md)
 * [Community Terms](legal/community-terms.md)
 * [Privacy Policy](privacy.md)
 

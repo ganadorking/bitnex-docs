@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** July 12, 2026
+**Last updated:** August 14, 2026
 
 This Privacy Policy explains how the Bitnex interface ("Bitnex", "we", "us", or "our") handles information when you use bitnex.pro to access decentralized trading on a third-party decentralized exchange protocol (the "Protocol").
 
@@ -42,7 +42,9 @@ Bitnex is an interface built on top of infrastructure and services provided by o
 - **The underlying exchange protocol** — the decentralized exchange that provides liquidity, order matching, custody and settlement. Your trades, positions and balances live on its on-chain system.
 - **Privy** — provides authentication and embedded wallets when you log in with email or Google.
 - **Cloudflare** — provides content delivery, security, and geo-location used for eligibility and geo-restriction.
-- **A database provider** — used to store your signed Terms of Service acceptance record.
+- **A database provider** — used to store your signed Terms of Service acceptance record and feature-acceptance records (for example, copy trading).
+- **Sentry** — error and performance monitoring. When an error occurs, technical context (browser, page, stack trace) is reported so we can fix it; a small sample of sessions may include an anonymized session replay with text inputs masked.
+- **Intercom** — powers the in-app support chat. Messages you send to support, and basic technical context, are processed there so we can answer you.
 
 {% hint style="warning" %}
 We do not control how these third parties process data. Please review their own privacy policies to understand their practices.
