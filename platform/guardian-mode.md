@@ -1,5 +1,7 @@
 # Guardian Mode
 
+![Guardian Mode — your equity against your limits](../.gitbook/assets/guardian.png)
+
 ## What it is
 
 Guardian Mode lets you set your own risk limits, and Bitnex enforces them **before you sign an order**. You decide the rules once, when you're calm; they apply every time, including the times you'd rather they didn't.

@@ -1,5 +1,7 @@
 # Copy Trading
 
+![The copy trading marketplace](../.gitbook/assets/copy-trading.png)
+
 Copy top traders automatically from Bitnex: the engine mirrors their trades into **your** account 24/7, proportional to your allocation, under your own risk limits.
 
 {% hint style="danger" %}
