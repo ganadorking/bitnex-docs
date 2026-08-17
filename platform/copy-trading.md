@@ -11,7 +11,7 @@ Copy top traders automatically from Bitnex: the engine mirrors their trades into
 ## How it works (in 5 steps)
 
 1. **Pick a trader** — from the Top 100, the Leaderboard, or by pasting any protocol wallet address (Snipers). Every profile shows real statistics: PnL, ROI, max drawdown, Sharpe, win rate, open positions and history.
-2. **Configure your copy** — allocation in USDC, Copytrade or Inverse mode, max leverage, max entry deviation, loss protection, and optionally which assets to copy or whether to seed the positions the trader already has open.
+2. **Configure your copy** — allocation in USDC, Copytrade or Inverse mode, max leverage, max entry deviation, auto-stop on loss, and optionally which assets to copy or whether to seed the positions the trader already has open.
 3. **Sign the terms** (once per wallet) and **approve the copy agent key** — a key that can **only trade, never withdraw**, and that you can revoke on-chain whenever you want. If you already have one from a previous copy, "Use existing" asks for no signature at all.
 4. **The engine copies 24/7** — it mirrors the trader's **new** position changes (opens, increases, reductions, closes **and their TP/SL**), proportional to your allocation. Every copied order is tagged with a "Copy" chip in your tables.
 5. **Pause, adjust or stop whenever you want.** Stopping a copy **does not close your open positions** — they stay in your account and you manage them from your Portfolio.
@@ -44,11 +44,25 @@ In Inverse mode, when the trader opens a long you open a **short** (and vice ver
 
 ## What is copied and what isn't
 
-* ✅ Opens, increases, reductions and closes of **perps** on the main dex.
+* ✅ Opens, increases, reductions and closes of **perps** — on the main dex **and on HIP-3 builder markets** (stocks, gold, etc.). The trader's equity is measured across all of their markets, so 100%-stocks traders are copied correctly.
 * ✅ **The trader's TP/SL** (mirrored, and updated if they move them).
 * ✅ A full close by the trader means a full close of your copy.
-* ❌ Spot, staking and HIP-3 markets (for now).
+* ❌ Spot and staking.
 * ❌ The trader's **historical** portfolio — only changes from the moment you activate the copy, unless you enable "copy already-open positions".
+
+## The once-only rule: your close is final
+
+A copied position is opened **once**. If **you** close it yourself (from your Portfolio, the terminal, or "Close All"), the engine treats that as your final decision for that market: **it will never reopen it** inside that subscription — not even if the trader adds to it, flips it, or you re-run "copy already-open positions". "Last activity" shows the market as *closed by you*. To copy that market again, stop the subscription and create a new one.
+
+## Exchange minimum and skipped positions
+
+Hyperliquid requires roughly **$10 of value per order**. Your copies are scaled by *your allocation ÷ the trader's equity*, so with a small allocation against a large trader, their smaller positions can scale below that minimum — those are **skipped** (never opened) and listed one by one in "Last activity" with the reason. Raising the allocation is the only way to include them.
+
+## Reliability
+
+* If the exchange rate-limits an order (a temporary "429"), the engine retries automatically with increasing pauses; if it still can't get through, the pending part is completed on the next cycle — **without duplicating** what was already opened.
+* "Copy already-open positions" is **idempotent**: re-running it only opens what is missing to reach the target, never doubles an existing copy.
+* If the engine cannot read part of a trader's account on a given cycle, that trader is skipped for that cycle entirely — an incomplete reading is never interpreted as "the trader closed everything".
 
 ## Delays and price differences
 
@@ -61,7 +75,7 @@ Copied orders pay the standard Bitnex fee (builder fee) for the copy trading sur
 ## Pausing, stopping and revoking
 
 * **Pause**: the engine stops opening **and** closing. Everything becomes 100% your responsibility: if the trader closes, your account does **not**. Your positions and TP/SL stay exactly as they are.
-* **Stop and delete**: removes the copy and its encrypted agent key from the server. Your open positions remain — manage them from your Portfolio.
+* **Stop and delete**: removes the copy and its encrypted agent key from the server. Your open positions remain — manage them from your Portfolio (the app asks you to confirm and reminds you of exactly this before stopping).
 * **Revoke on-chain**: you can invalidate the agent key at any time from the protocol (the key named "bitnex-copy").
 
 ## Terms and conditions (the signed text)
