@@ -10,6 +10,7 @@
 * [Funding Your Account](platform/funding-account.md)
 * [Fees](platform/fees.md)
 * [Portfolio](platform/portfolio.md)
+* [Sub-Accounts](platform/sub-accounts.md)
 * [Swap](platform/swap.md)
 * [Referral Program](platform/referrals.md)
 * [Communities](platform/communities.md)
