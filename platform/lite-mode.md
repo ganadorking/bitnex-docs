@@ -1,6 +1,6 @@
 # Lite Mode
 
-Lite Mode is Bitnex's simplified trading view — a clean, fast interface built around one question: **buy or sell?** It strips the terminal down to a price chart, a Buy/Sell panel, and your positions, so you can open and manage trades in seconds without navigating an order book or a multi-widget layout.
+Lite Mode is Dasus's simplified trading view — a clean, fast interface built around one question: **buy or sell?** It strips the terminal down to a price chart, a Buy/Sell panel, and your positions, so you can open and manage trades in seconds without navigating an order book or a multi-widget layout.
 
 Lite is ideal if you:
 

@@ -1,26 +1,26 @@
 # Privacy Policy
 
-**Last updated:** August 14, 2026
+**Last updated:** August 31, 2026
 
-This Privacy Policy explains how the Bitnex interface ("Bitnex", "we", "us", or "our") handles information when you use bitnex.pro to access decentralized trading on a third-party decentralized exchange protocol (the "Protocol").
+This Privacy Policy explains how the Dasus interface ("Dasus", "we", "us", or "our") handles information when you use dasus.xyz to access decentralized trading on a third-party decentralized exchange protocol (the "Protocol").
 
-Bitnex is a **non-custodial trading interface**. We are the front-end; the trading, matching, custody and settlement of your funds happen on the Protocol's on-chain system. Because of this design, we deliberately collect as little information as possible.
+Dasus is a **non-custodial trading interface**. We are the front-end; the trading, matching, custody and settlement of your funds happen on the Protocol's on-chain system. Because of this design, we deliberately collect as little information as possible.
 
 ## The short version
 
-- We do **not** collect your name, and we do **not** run KYC or identity verification on Bitnex.
+- We do **not** collect your name, and we do **not** run KYC or identity verification on Dasus.
 - There is no traditional sign-up. You connect a crypto wallet, or use email/Google to create an embedded wallet.
 - We process only what we need to run the interface and meet eligibility/geo requirements: wallet addresses, your signed Terms acceptance record, an approximate country from your IP address, and basic technical/analytics logs.
 - Your on-chain activity is public and permanent, and is outside our control.
 
 ## What we do NOT collect
 
-- **Names, government IDs, or KYC documents.** Bitnex does not verify your identity.
-- **Custody of your funds.** Funds are held by the Protocol's on-chain system, never by Bitnex.
+- **Names, government IDs, or KYC documents.** Dasus does not verify your identity.
+- **Custody of your funds.** Funds are held by the Protocol's on-chain system, never by Dasus.
 - **Private keys or seed phrases.** We never ask for, receive, or store the keys that control your funds.
 
 {% hint style="info" %}
-Because Bitnex is non-custodial, you remain in control of your assets at all times. We cannot move, freeze, or withdraw your funds.
+Because Dasus is non-custodial, you remain in control of your assets at all times. We cannot move, freeze, or withdraw your funds.
 {% endhint %}
 
 ## What we may process
@@ -29,7 +29,7 @@ To operate the interface and meet our eligibility obligations, we may process:
 
 - **Wallet and public addresses** — the address you connect or the embedded wallet address created for you, and the on-chain "agent wallet" (session key) used to place orders without a pop-up on every trade.
 - **Your Terms acceptance record** — when you first connect, you accept our Terms of Service by signing a message with your wallet. We store the signed record (including the address, the Terms version accepted, and a timestamp) for compliance purposes.
-- **Approximate country from your IP address** — used to enforce eligibility and geo-restrictions. Bitnex is not available to U.S. persons or to persons located in restricted or sanctioned jurisdictions.
+- **Approximate country from your IP address** — used to enforce eligibility and geo-restrictions. Dasus is not available to U.S. persons or to persons located in restricted or sanctioned jurisdictions.
 - **Referral codes** — if you join through a referral link or create/set a referral code, we process that code association to attribute rewards and discounts.
 - **Basic analytics and technical logs** — such as pages/features used, device and browser type, and error and performance data, so we can keep the interface working and secure.
 
@@ -37,7 +37,7 @@ We do not use this information to build advertising profiles, and we do not sell
 
 ## Third parties we rely on
 
-Bitnex is an interface built on top of infrastructure and services provided by others. When you use Bitnex, some information is necessarily processed by these third parties under their own terms and privacy policies:
+Dasus is an interface built on top of infrastructure and services provided by others. When you use Dasus, some information is necessarily processed by these third parties under their own terms and privacy policies:
 
 - **The underlying exchange protocol** — the decentralized exchange that provides liquidity, order matching, custody and settlement. Your trades, positions and balances live on its on-chain system.
 - **Privy** — provides authentication and embedded wallets when you log in with email or Google.
@@ -52,7 +52,7 @@ We do not control how these third parties process data. Please review their own 
 
 ## Cookies and local storage
 
-Bitnex uses cookies and browser local storage to:
+Dasus uses cookies and browser local storage to:
 
 - keep you signed in and maintain your session,
 - remember your preferences (for example, Lite vs. Pro view, chart and layout settings), and
@@ -81,7 +81,7 @@ We keep information only for as long as needed for the purposes described in thi
 
 ## Children
 
-Bitnex is not directed to, and is not intended for use by, anyone under the age of majority in their jurisdiction. We do not knowingly process information from minors.
+Dasus is not directed to, and is not intended for use by, anyone under the age of majority in their jurisdiction. We do not knowingly process information from minors.
 
 ## Changes to this policy
 
@@ -89,4 +89,4 @@ We may update this Privacy Policy from time to time. When we do, we will revise 
 
 ## Contact
 
-If you have questions about this Privacy Policy or how the Bitnex interface handles information, contact us through the in-app support chat at [bitnex.pro](https://bitnex.pro) or via our official channels.
+If you have questions about this Privacy Policy or how the Dasus interface handles information, contact us through the in-app support chat at [dasus.xyz](https://dasus.xyz) or via our official channels.

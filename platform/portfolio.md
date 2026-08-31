@@ -1,10 +1,10 @@
 # Portfolio
 
-The **Portfolio** page is your account's home base — a single view of everything you hold and everything you've done on Bitnex. It brings together your total equity, performance over time, balances across every account type, open positions and orders, and a complete ledger of deposits and withdrawals.
+The **Portfolio** page is your account's home base — a single view of everything you hold and everything you've done on Dasus. It brings together your total equity, performance over time, balances across every account type, open positions and orders, and a complete ledger of deposits and withdrawals.
 
 ![Portfolio](../.gitbook/assets/portfolio.png)
 
-Because Bitnex is non-custodial, everything shown here reflects your on-chain state on the underlying protocol — the Portfolio page reads it and presents it in one place. Your funds remain under your control at all times.
+Because Dasus is non-custodial, everything shown here reflects your on-chain state on the underlying protocol — the Portfolio page reads it and presents it in one place. Your funds remain under your control at all times.
 
 ## Total equity & PnL chart
 

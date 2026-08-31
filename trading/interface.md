@@ -1,6 +1,6 @@
 # Trading Interface
 
-This page walks through the anatomy of placing and managing a trade on Bitnex. The flow is the same in both views — [Lite](../platform/lite-mode.md) keeps it minimal, while [Pro](../platform/web-terminal.md) exposes the full terminal — so everything below applies to both, with extra depth where Pro adds more control.
+This page walks through the anatomy of placing and managing a trade on Dasus. The flow is the same in both views — [Lite](../platform/lite-mode.md) keeps it minimal, while [Pro](../platform/web-terminal.md) exposes the full terminal — so everything below applies to both, with extra depth where Pro adds more control.
 
 {% hint style="info" %}
 Before you can place your first order, make sure you have completed the one-time setup: connect, enable trading, and deposit USDC. See [Enable Trading](../guides/enable-trading.md) and [Funding Your Account](../platform/funding-account.md).
@@ -10,7 +10,7 @@ Before you can place your first order, make sure you have completed the one-time
 
 ### 1. Pick a market
 
-Use the market selector (or the watchlist/favorites bar in Pro) to choose what you want to trade. Bitnex lists dozens of perpetual markets — BTC, ETH, SOL and many more — plus spot markets. Each market shows its live stats: mark price, oracle price, 24h change and volume, open interest, and the current funding rate for perps.
+Use the market selector (or the watchlist/favorites bar in Pro) to choose what you want to trade. Dasus lists dozens of perpetual markets — BTC, ETH, SOL and many more — plus spot markets. Each market shows its live stats: mark price, oracle price, 24h change and volume, open interest, and the current funding rate for perps.
 
 ### 2. Choose a side
 
@@ -90,7 +90,7 @@ Every resting order — limit, stop, take profit, scale sub-orders — appears u
 - Pro adds **Funding History** (funding payments on your perp positions — see [Funding Rate](funding-rate.md)) and a **TWAP** tab for running TWAP orders.
 
 {% hint style="success" %}
-Everything settles on-chain through the underlying protocol, so your positions, orders, and history reflect the actual on-chain state of your account — not an internal ledger held by Bitnex.
+Everything settles on-chain through the underlying protocol, so your positions, orders, and history reflect the actual on-chain state of your account — not an internal ledger held by Dasus.
 {% endhint %}
 
 ## Related pages

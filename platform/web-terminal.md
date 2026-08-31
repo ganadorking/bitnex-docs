@@ -1,6 +1,6 @@
 # Web Terminal (Pro)
 
-The Pro terminal is Bitnex's full-featured trading interface — a dense, multi-widget layout built for active traders. Everything you need to trade a market lives on a single screen: a TradingView-style chart, a live order book, a recent trades feed, an advanced order form, and a set of account tabs covering balances, positions, orders and history.
+The Pro terminal is Dasus's full-featured trading interface — a dense, multi-widget layout built for active traders. Everything you need to trade a market lives on a single screen: a TradingView-style chart, a live order book, a recent trades feed, an advanced order form, and a set of account tabs covering balances, positions, orders and history.
 
 ![The Pro terminal](../.gitbook/assets/trade-terminal.png)
 

@@ -1,6 +1,6 @@
 # Order Types
 
-Bitnex Pro supports a full range of order types, from simple market orders to advanced execution algorithms. Every order is matched on the underlying on-chain exchange protocol's central limit order book, and the estimated cost — including fees — is always shown in Order Details before you confirm.
+Dasus Pro supports a full range of order types, from simple market orders to advanced execution algorithms. Every order is matched on the underlying on-chain exchange protocol's central limit order book, and the estimated cost — including fees — is always shown in Order Details before you confirm.
 
 | Order type | What it does | When to use it |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ A stop limit protects you from a bad fill price but does **not** guarantee execu
 
 ### Take Profit
 
-A take profit order triggers when the market reaches your profit target and closes some or all of your position. On Bitnex you can:
+A take profit order triggers when the market reaches your profit target and closes some or all of your position. On Dasus you can:
 
 - Attach a TP to a new order at placement time.
 - Add or edit a TP on an existing position — full or partial size, defined by price or by gain %.

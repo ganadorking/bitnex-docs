@@ -123,7 +123,7 @@ Daily PnL for the last ~92 days, coloured green or red, with the month total. On
 2. A summary appears with the idea's parameters: market, side, leverage, entry, stop and target.
 3. Continuing takes you to **your own order panel**, pre-filled with those parameters.
 4. **You choose your own size.** You can change any parameter — leverage, stop, target, order type.
-5. You review the fees and **sign the order with your own wallet**, exactly like any other order on Bitnex.
+5. You review the fees and **sign the order with your own wallet**, exactly like any other order on Dasus.
 
 If you do nothing, nothing happens. There is no auto-execution at any point in this sequence.
 
@@ -155,7 +155,7 @@ Changing the policy to **Invite code** removes the community from Explore. Exist
 
 ### Auto-share
 
-**Everything you trade in the Bitnex terminal is published to your community automatically** — opens, adjustments (adding to a position, moving a stop or target) and closes with the final result. This is not optional: it's what makes the feed honest. If you don't want a trade published, don't place it from an account tied to a community.
+**Everything you trade in the Dasus terminal is published to your community automatically** — opens, adjustments (adding to a position, moving a stop or target) and closes with the final result. This is not optional: it's what makes the feed honest. If you don't want a trade published, don't place it from an account tied to a community.
 
 Ideas stay synchronised with your live position. If you close in the terminal, the idea closes with its real exit price. If you average in, the idea's entry updates.
 
@@ -190,9 +190,9 @@ Trade notifications only work if the creator has made **their wallet public**, b
 | Positions and levels | The creator's public account state, including HIP-3 markets (EURUSD, GOLD, pre-IPO) |
 | ROI, PnL, equity curve | The creator's public portfolio history |
 | Win rate, profit factor, Sharpe, best/worst | The creator's public fill history |
-| Members, ideas, access policy | Bitnex |
+| Members, ideas, access policy | Dasus |
 
-Everything except the last row is public on-chain data. You can verify any of it yourself in the [explorer](https://bitnex.pro/explorer).
+Everything except the last row is public on-chain data. You can verify any of it yourself in the [explorer](https://dasus.xyz/explorer).
 
 ### How ROI is calculated
 
@@ -209,15 +209,15 @@ ROI is the period's PnL divided by the capital actually at work in that period �
 
 ## Fees
 
-Orders placed from a community idea pay exactly the same fees as any other Bitnex order — the protocol's base fee plus the platform fee, always shown before you sign. Creators earn through the standard [Referral Program](referrals.md) when their members join with their referral code. **Creators cannot charge for access on Bitnex.**
+Orders placed from a community idea pay exactly the same fees as any other Dasus order — the protocol's base fee plus the platform fee, always shown before you sign. Creators earn through the standard [Referral Program](referrals.md) when their members join with their referral code. **Creators cannot charge for access on Dasus.**
 
 ## What Communities is NOT
 
 - ❌ **Not copy trading.** No order is ever placed on your account automatically.
 - ❌ **Not financial advice.** Ideas are information about someone else's activity, not a recommendation.
 - ❌ **Not managed accounts.** Creators cannot access, hold or move your funds, and cannot promise returns.
-- ❌ **Not vetted.** Bitnex does not review, endorse or verify creators. A visible track record is not a guarantee.
+- ❌ **Not vetted.** Dasus does not review, endorse or verify creators. A visible track record is not a guarantee.
 
 ## Risk warning
 
-Leveraged trading can lose you more than you expect, quickly. Following someone else's idea does not reduce that risk — it adds the risk that their position size, time horizon and risk tolerance are nothing like yours. Never commit capital you cannot afford to lose, always set a stop, and read the [Risk Disclosure](https://bitnex.pro/risk-disclosure) before trading.
+Leveraged trading can lose you more than you expect, quickly. Following someone else's idea does not reduce that risk — it adds the risk that their position size, time horizon and risk tolerance are nothing like yours. Never commit capital you cannot afford to lose, always set a stop, and read the [Risk Disclosure](https://dasus.xyz/risk-disclosure) before trading.

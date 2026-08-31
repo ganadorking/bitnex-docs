@@ -69,4 +69,4 @@ Sub-orders remain active until they fill or you cancel them. If you're using sca
 - **Match the ladder to your thesis.** A wide range with many orders suits gradual accumulation; a tight range with few orders behaves closer to a single limit order.
 - **Use skew deliberately.** Skewing size toward the far end of the range means better average pricing if the full range fills — but smaller fills if price only grazes the near end.
 - **Check the minimums.** Before increasing the number of orders, confirm each sub-order still clears the protocol's minimum order size — the order form will flag this before you submit.
-- **Review Order Details.** As with every order on Bitnex, the exact costs and parameters are shown in Order Details before you confirm.
+- **Review Order Details.** As with every order on Dasus, the exact costs and parameters are shown in Order Details before you confirm.

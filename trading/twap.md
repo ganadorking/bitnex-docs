@@ -2,7 +2,7 @@
 
 A **TWAP (Time-Weighted Average Price)** order splits a large order into smaller pieces and executes them at regular intervals over a period of time you choose. Instead of hitting the market with your full size at once, a TWAP works your order gradually — aiming for an average execution price close to the market's time-weighted average over that window.
 
-On Bitnex, TWAP execution is handled **natively by the underlying on-chain exchange protocol**: once you submit a TWAP, the protocol slices and executes the sub-orders on-chain over the duration. You don't need to keep the app open for the order to keep running.
+On Dasus, TWAP execution is handled **natively by the underlying on-chain exchange protocol**: once you submit a TWAP, the protocol slices and executes the sub-orders on-chain over the duration. You don't need to keep the app open for the order to keep running.
 
 ## Why use a TWAP?
 
@@ -29,7 +29,7 @@ TWAP orders are available in the [Pro terminal](../platform/web-terminal.md):
 4. Set the **duration** — the total time window over which the order should run. The protocol divides your total size into sub-orders executed at intervals across this window.
 5. Review the **Order Details**, including the estimated cost and fees, then confirm.
 
-Because trading on Bitnex is gasless once [trading is enabled](../guides/enable-trading.md), each sub-order executes automatically — no wallet popups, no per-fill signatures.
+Because trading on Dasus is gasless once [trading is enabled](../guides/enable-trading.md), each sub-order executes automatically — no wallet popups, no per-fill signatures.
 
 {% hint style="warning" %}
 Each executed slice is a fill and incurs trading fees like any other order. See [Fees](../platform/fees.md) for how maker/taker rates and your volume tier apply.

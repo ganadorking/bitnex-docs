@@ -2,10 +2,10 @@
 
 ![The copy trading marketplace](../.gitbook/assets/copy-trading.png)
 
-Copy top traders automatically from Bitnex: the engine mirrors their trades into **your** account 24/7, proportional to your allocation, under your own risk limits.
+Copy top traders automatically from Dasus: the engine mirrors their trades into **your** account 24/7, proportional to your allocation, under your own risk limits.
 
 {% hint style="danger" %}
-**Risk warning.** Copy trading places **real** orders in your account and can generate losses, including the **partial or total** loss of the capital you allocate. Past performance does not guarantee future results. Bitnex is **not** a fund manager and **not** a financial advisor: the decision to copy a trader is exclusively yours.
+**Risk warning.** Copy trading places **real** orders in your account and can generate losses, including the **partial or total** loss of the capital you allocate. Past performance does not guarantee future results. Dasus is **not** a fund manager and **not** a financial advisor: the decision to copy a trader is exclusively yours.
 {% endhint %}
 
 ## How it works (in 5 steps)
@@ -18,7 +18,7 @@ Copy top traders automatically from Bitnex: the engine mirrors their trades into
 
 ## Do I need to keep my wallet connected?
 
-**No.** The copy runs on Bitnex servers using the agent key: you don't need your wallet connected, the page open, or your computer switched on. The agent key is stored **encrypted** (AES-256-GCM) and only the engine can use it — and only to trade, never to withdraw funds.
+**No.** The copy runs on Dasus servers using the agent key: you don't need your wallet connected, the page open, or your computer switched on. The agent key is stored **encrypted** (AES-256-GCM) and only the engine can use it — and only to trade, never to withdraw funds.
 
 ## How your copies are sized
 
@@ -70,26 +70,26 @@ The engine polls traders in cycles of roughly 5 seconds. Between the trader's tr
 
 ## Fees
 
-Copied orders pay the standard Bitnex fee (builder fee) for the copy trading surface — by default, the same rate as the Pro terminal. There is no management fee and no performance fee: we do not take a percentage of your profits.
+Copied orders pay the standard Dasus fee (builder fee) for the copy trading surface — by default, the same rate as the Pro terminal. There is no management fee and no performance fee: we do not take a percentage of your profits.
 
 ## Pausing, stopping and revoking
 
 * **Pause**: the engine stops opening **and** closing. Everything becomes 100% your responsibility: if the trader closes, your account does **not**. Your positions and TP/SL stay exactly as they are.
 * **Stop and delete**: removes the copy and its encrypted agent key from the server. Your open positions remain — manage them from your Portfolio (the app asks you to confirm and reminds you of exactly this before stopping).
-* **Revoke on-chain**: you can invalidate the agent key at any time from the protocol (the key named "bitnex-copy").
+* **Revoke on-chain**: you can invalidate the agent key at any time from the protocol (it appears under its on-chain name, `bitnex-copy`, kept unchanged so approvals signed before the rebrand stay valid).
 
 ## Terms and conditions (the signed text)
 
-When you activate copy trading you sign the following canonical text with your wallet (version `v1-2026-08`). Your wallet shows you the full text at the moment of signing, and the signature is stored as cryptographic proof of your acceptance.
+When you activate copy trading you sign the following canonical text with your wallet (version `v2-2026-08`). Your wallet shows you the full text at the moment of signing, and the signature is stored as cryptographic proof of your acceptance.
 
-> **Bitnex Copy Trading — Risk acceptance (v1-2026-08)**
+> **Dasus Copy Trading — Risk acceptance (v2-2026-08)**
 >
 > By signing, I declare and accept that:
 >
 > 1. Copy trading places REAL orders in my account automatically, and I may lose my allocated capital PARTIALLY or ENTIRELY, just as the copied trader may.
-> 2. Bitnex is NOT a fund manager, is NOT a financial advisor, and NOTHING on the platform constitutes a recommendation or investment purpose. The decision to copy a trader is EXCLUSIVELY mine; for real advice I must consult qualified financial professionals.
+> 2. Dasus is NOT a fund manager, is NOT a financial advisor, and NOTHING on the platform constitutes a recommendation or investment purpose. The decision to copy a trader is EXCLUSIVELY mine; for real advice I must consult qualified financial professionals.
 > 3. There may be DELAYS or price differences between the trader's trade and my copy (servers, network, protocol execution); my results may differ from the trader's, potentially significantly.
-> 4. Bitnex and any related party are NOT liable for losses, adjustments, configuration changes, service interruptions, execution errors, or any other damage arising from the use of copy trading.
+> 4. Dasus and any related party are NOT liable for losses, adjustments, configuration changes, service interruptions, execution errors, or any other damage arising from the use of copy trading.
 > 5. Past performance of the copied trader does NOT guarantee future results.
 > 6. Stopping a copy does NOT close my open positions: managing them is my responsibility.
 > 7. The agent key I authorize can only trade (never withdraw) and I can revoke it on-chain whenever I want.
@@ -106,7 +106,7 @@ Yes, as long as the copy is ACTIVE. While paused, no — everything is up to you
 Yes, each copy is independent, with its own allocation and limits.
 
 **Can I trade my account manually while copying?**
-Yes. The engine only touches what it opened (it keeps its own record of lots); your personal positions don't trigger loss protection and aren't closed by the copy. Note that they do share the same account margin.
+Yes. The engine only touches what it opened (it keeps its own record of lots); your personal positions don't trigger the auto-stop and aren't closed by the copy. Note that they do share the same account margin.
 
 **Why wasn't one of the trader's trades copied?**
 Check "Last activity" on your copy. The usual reasons are: entry deviation exceeded, notional below the minimum (~$10), the allocation × leverage cap reached, or not enough margin.

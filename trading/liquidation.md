@@ -1,6 +1,6 @@
 # Liquidation
 
-Liquidation is the forced closure of a leveraged position when its margin can no longer support it. On Bitnex, liquidations are executed entirely by the underlying on-chain exchange protocol — the same on-chain system that handles order matching and settlement. Bitnex never holds your funds and never triggers liquidations itself.
+Liquidation is the forced closure of a leveraged position when its margin can no longer support it. On Dasus, liquidations are executed entirely by the underlying on-chain exchange protocol — the same on-chain system that handles order matching and settlement. Dasus never holds your funds and never triggers liquidations itself.
 
 Understanding how liquidation works — and how to keep a healthy distance from it — is the single most important part of trading perpetual futures with leverage.
 
@@ -31,7 +31,7 @@ Maintenance requirements are set by the underlying protocol per market. Markets 
 
 ## Your estimated liquidation price — always visible
 
-Bitnex shows the **estimated liquidation price**:
+Dasus shows the **estimated liquidation price**:
 
 - **Before you trade** — in the Order Details of every order form, alongside cost and fees, so you can see your risk before you commit.
 - **On every open position** — in the positions table (Lite and Pro), updated as market conditions and your account state change.

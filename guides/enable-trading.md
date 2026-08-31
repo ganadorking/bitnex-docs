@@ -1,6 +1,6 @@
 # Enable Trading (Agent Wallet)
 
-Before you place your first order on Bitnex, you'll complete a one-time setup step called **Enable Trading**. This creates an **agent wallet** — a dedicated session key that signs your orders automatically in the background, so you can trade without approving a wallet popup for every single action.
+Before you place your first order on Dasus, you'll complete a one-time setup step called **Enable Trading**. This creates an **agent wallet** — a dedicated session key that signs your orders automatically in the background, so you can trade without approving a wallet popup for every single action.
 
 This page explains what the agent wallet is, exactly what it can and cannot do, and how to manage or revoke it.
 
@@ -10,7 +10,7 @@ Trading on the underlying on-chain exchange protocol is fully non-custodial: eve
 
 The agent wallet solves this. When you click **Enable Trading**:
 
-1. Bitnex generates a fresh keypair **locally in your browser**. The private key never leaves your device and is never sent to Bitnex servers.
+1. Dasus generates a fresh keypair **locally in your browser**. The private key never leaves your device and is never sent to Dasus servers.
 2. You sign a **one-time approval** with your main wallet, registering the agent key with the underlying protocol as an authorized signer for your account.
 3. From then on, the agent key signs your trading actions instantly and silently — no popups, no gas.
 
@@ -27,7 +27,7 @@ Enabling trading involves signing a small number of approvals with your **main w
 | Approval | What it does |
 | --- | --- |
 | **Agent approval** | Registers the agent wallet as an authorized session signer for your account on the underlying protocol. |
-| **Platform fee approval** | Sets the maximum platform fee Bitnex may attach to your orders. Your actual costs are always shown in Order Details before you trade — see [Fees](../platform/fees.md). |
+| **Platform fee approval** | Sets the maximum platform fee Dasus may attach to your orders. Your actual costs are always shown in Order Details before you trade — see [Fees](../platform/fees.md). |
 
 A few things to know:
 
@@ -44,7 +44,7 @@ A few things to know:
 | Adjust leverage and margin mode | Approve other agents or change permissions |
 | Manage positions (close, set TP/SL) | Access your main wallet's private key |
 
-The separation is enforced by the underlying protocol itself, not by Bitnex — agent keys are simply not granted withdrawal or transfer rights at the protocol level.
+The separation is enforced by the underlying protocol itself, not by Dasus — agent keys are simply not granted withdrawal or transfer rights at the protocol level.
 
 ## Revoking or rotating the session
 
@@ -80,6 +80,6 @@ No harm done. Click **Enable Trading**, sign the approval again, and you're back
 
 ## Next steps
 
-- New to Bitnex? Start with the full [Getting Started](../getting-started.md) walkthrough.
+- New to Dasus? Start with the full [Getting Started](../getting-started.md) walkthrough.
 - Ready to trade? Explore the available [Order Types](../trading/order-types.md).
 - Questions about costs? Review [Fees](../platform/fees.md) or check the [FAQ](../faq.md).

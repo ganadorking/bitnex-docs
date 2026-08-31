@@ -1,6 +1,6 @@
 # Entry Price & PnL
 
-Understanding how your entry price is calculated and how profit and loss (PnL) is measured is essential for tracking performance and managing risk. This page explains how Bitnex displays entry price, mark price, unrealized and realized PnL, and ROE — and how partial closes affect each of them.
+Understanding how your entry price is calculated and how profit and loss (PnL) is measured is essential for tracking performance and managing risk. This page explains how Dasus displays entry price, mark price, unrealized and realized PnL, and ROE — and how partial closes affect each of them.
 
 ## Entry price: your average across fills
 

@@ -1,6 +1,6 @@
 # Funding Your Account
 
-Bitnex is non-custodial: your funds are held by the underlying on-chain exchange protocol, never by Bitnex. Funding your account means moving USDC from the Arbitrum network into your trading account — all from inside the app, in a few clicks. Once funded, your balance is unified across perps and spot, and trading is gasless.
+Dasus is non-custodial: your funds are held by the underlying on-chain exchange protocol, never by Dasus. Funding your account means moving USDC from the Arbitrum network into your trading account — all from inside the app, in a few clicks. Once funded, your balance is unified across perps and spot, and trading is gasless.
 
 {% hint style="info" %}
 You can deposit before or after [Enable Trading](../guides/enable-trading.md). If you enable trading on a brand-new, empty account, the app will simply ask you to make your first deposit and then finish the setup automatically.
@@ -33,7 +33,7 @@ Withdrawals work in reverse — from your trading account back to your wallet on
 3. Confirm with your wallet signature.
 4. The funds arrive as **USDC on Arbitrum** in your wallet address.
 
-Because Bitnex is non-custodial, withdrawals are executed by the underlying protocol's on-chain system — there is no approval queue, no support ticket, and no one who can freeze your withdrawal on the Bitnex side.
+Because Dasus is non-custodial, withdrawals are executed by the underlying protocol's on-chain system — there is no approval queue, no support ticket, and no one who can freeze your withdrawal on the Dasus side.
 
 {% hint style="danger" %}
 Your agent (session) key can sign orders but **cannot withdraw funds**. Withdrawals always require a signature from your own wallet. See [Enable Trading](../guides/enable-trading.md) for how this works.
@@ -47,7 +47,7 @@ If you don't hold USDC on Arbitrum yet, common ways to get it:
 - **Bridge from another chain.** If your USDC lives on Ethereum or another network, use a bridge to move it to Arbitrum.
 - **Swap on Arbitrum.** If you already hold other assets on Arbitrum, swap them for USDC using any decentralized exchange on the network.
 
-You will also need a small amount of **ETH on Arbitrum** to pay the gas for the deposit transaction itself. After that, trading on Bitnex is gasless.
+You will also need a small amount of **ETH on Arbitrum** to pay the gas for the deposit transaction itself. After that, trading on Dasus is gasless.
 
 ## Gasless trading after setup
 

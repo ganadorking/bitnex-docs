@@ -1,13 +1,13 @@
 # Getting Started
 
-Welcome to Bitnex. This guide walks you through everything you need to go from zero to your first trade: connecting a wallet, enabling trading, funding your account, and managing your first position.
+Welcome to Dasus. This guide walks you through everything you need to go from zero to your first trade: connecting a wallet, enabling trading, funding your account, and managing your first position.
 
-Bitnex is a **non-custodial** trading platform for perpetual futures and spot markets, built on top of a high-performance decentralized exchange protocol. The underlying protocol provides the on-chain order book, matching, custody and settlement — Bitnex gives you a fast, polished interface to trade on it. There is no traditional sign-up and no KYC on Bitnex, and once set up, trading is gasless.
+Dasus is a **non-custodial** trading platform for perpetual futures and spot markets, built on top of a high-performance decentralized exchange protocol. The underlying protocol provides the on-chain order book, matching, custody and settlement — Dasus gives you a fast, polished interface to trade on it. There is no traditional sign-up and no KYC on Dasus, and once set up, trading is gasless.
 
-![The Bitnex trading terminal](.gitbook/assets/trade-terminal.png)
+![The Dasus trading terminal](.gitbook/assets/trade-terminal.png)
 
 {% hint style="success" %}
-**Your funds never leave your control.** Assets are held by the underlying protocol's on-chain system — never by Bitnex. You can withdraw at any time without asking anyone's permission.
+**Your funds never leave your control.** Assets are held by the underlying protocol's on-chain system — never by Dasus. You can withdraw at any time without asking anyone's permission.
 {% endhint %}
 
 ## Step 1 — Connect
@@ -15,9 +15,9 @@ Bitnex is a **non-custodial** trading platform for perpetual futures and spot ma
 Click **Connect** in the top-right corner of the app. You can connect in two ways:
 
 * **Crypto wallet** — MetaMask, Coinbase Wallet, Rainbow and other popular wallets are supported.
-* **Email or Google** — no wallet? Sign in with email or Google and Bitnex creates an embedded **self-custodial** wallet for you via Privy. You keep control of it; it works like any other wallet.
+* **Email or Google** — no wallet? Sign in with email or Google and Dasus creates an embedded **self-custodial** wallet for you via Privy. You keep control of it; it works like any other wallet.
 
-Either way, there is no account registration form and no KYC process on Bitnex.
+Either way, there is no account registration form and no KYC process on Dasus.
 
 ## Step 2 — Accept the Terms
 
@@ -29,7 +29,7 @@ On your first connection, you'll be asked to sign a message with your wallet. Th
 Signing this message is free — it's an off-chain signature, not a transaction, and costs no gas.
 
 {% hint style="warning" %}
-Bitnex is **not available** to U.S. persons or to residents of restricted or sanctioned jurisdictions. See the [Terms of Service](terms.md) for details.
+Dasus is **not available** to U.S. persons or to residents of restricted or sanctioned jurisdictions. See the [Terms of Service](terms.md) for details.
 {% endhint %}
 
 ## Step 3 — Enable Trading
@@ -40,7 +40,7 @@ Next, click **Enable Trading**. This is a one-time setup that makes trading fast
 * These approvals create an **agent wallet** (a session key) that signs your orders automatically in the background — no wallet confirmation popup for every trade.
 * The agent key is strictly limited: it **cannot withdraw funds**, and you can **revoke it at any time** from the app.
 
-This is why trading on Bitnex feels as fast as a centralized exchange while remaining fully self-custodial. For a detailed walkthrough, see [Enable Trading](guides/enable-trading.md).
+This is why trading on Dasus feels as fast as a centralized exchange while remaining fully self-custodial. For a detailed walkthrough, see [Enable Trading](guides/enable-trading.md).
 
 {% hint style="info" %}
 Brand-new account? If you click **Enable Trading** while your account is still empty, the app will first ask you to make your first deposit (Step 4) and then finish the setup automatically.

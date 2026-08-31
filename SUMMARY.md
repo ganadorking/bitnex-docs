@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to Bitnex](README.md)
+* [Welcome to Dasus](README.md)
 * [Getting Started](getting-started.md)
 
 ## Platform

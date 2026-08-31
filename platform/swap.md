@@ -1,6 +1,6 @@
 # Swap
 
-Swap is the fastest way to exchange one spot asset for another on Bitnex. Instead of working an order on the Pro terminal, you pick the token you're paying with, the token you want, and confirm — Bitnex handles the routing against the underlying protocol's spot order books for you.
+Swap is the fastest way to exchange one spot asset for another on Dasus. Instead of working an order on the Pro terminal, you pick the token you're paying with, the token you want, and confirm — Dasus handles the routing against the underlying protocol's spot order books for you.
 
 ![Swap](../.gitbook/assets/swap.png)
 
@@ -42,7 +42,7 @@ If you want to set an exact price, work passive limit orders, or watch the book 
 ## FAQ
 
 **Do I pay gas for swaps?**
-No. Like all trading on Bitnex, swaps are gasless once trading is enabled — see [Enable Trading](../guides/enable-trading.md).
+No. Like all trading on Dasus, swaps are gasless once trading is enabled — see [Enable Trading](../guides/enable-trading.md).
 
 **Which tokens can I swap?**
 Any asset listed on the underlying protocol's spot markets. The token selector shows everything available, along with your current balances.

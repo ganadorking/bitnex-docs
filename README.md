@@ -1,14 +1,14 @@
-# Welcome to Bitnex
+# Welcome to Dasus
 
-Bitnex is a non-custodial trading platform for perpetual futures and spot markets. Connect a wallet — or just an email — and trade dozens of markets with the speed and depth of a professional exchange, while your funds never leave your control. There is no sign-up form, no KYC, and once trading is enabled, every order is gasless.
+Dasus is a non-custodial trading platform for perpetual futures and spot markets. Connect a wallet — or just an email — and trade dozens of markets with the speed and depth of a professional exchange, while your funds never leave your control. There is no sign-up form, no KYC, and once trading is enabled, every order is gasless.
 
-Under the hood, Bitnex is built on a high-performance decentralized exchange protocol: a fully on-chain central limit order book that handles liquidity, order matching, custody and settlement. Bitnex gives you the interface — from a clean, beginner-friendly Lite view to a full Pro terminal — and the underlying protocol does the heavy lifting on-chain.
+Under the hood, Dasus is built on a high-performance decentralized exchange protocol: a fully on-chain central limit order book that handles liquidity, order matching, custody and settlement. Dasus gives you the interface — from a clean, beginner-friendly Lite view to a full Pro terminal — and the underlying protocol does the heavy lifting on-chain.
 
-![Bitnex](.gitbook/assets/home.png)
+![Dasus](.gitbook/assets/home.png)
 
-## Why Bitnex
+## Why Dasus
 
-- **Non-custodial by design.** Your assets are held by the underlying protocol's on-chain system, never by Bitnex. You stay in control of your funds at all times.
+- **Non-custodial by design.** Your assets are held by the underlying protocol's on-chain system, never by Dasus. You stay in control of your funds at all times.
 - **One-click, gasless trading.** A one-time setup creates a secure agent wallet (session key) that signs orders for you — no wallet popup per trade, no gas per order. See [Enable Trading](guides/enable-trading.md).
 - **Deep on-chain liquidity.** Orders are matched on a fully on-chain central limit order book, so you get transparent, exchange-grade execution without an intermediary.
 - **Lite & Pro, switchable anytime.** Start simple with [Lite mode](platform/lite-mode.md) or go full terminal with the [Pro web terminal](platform/web-terminal.md) — order book, advanced order types, TradingView-style charting and more.
@@ -29,5 +29,5 @@ New to perpetual futures? The [Trading section](trading/interface.md) covers the
 {% endhint %}
 
 {% hint style="warning" %}
-Bitnex is not available to U.S. persons or to residents of restricted or sanctioned jurisdictions. On first connect you will be asked to sign a message accepting the [Terms of Service](terms.md) and confirming your eligibility.
+Dasus is not available to U.S. persons or to residents of restricted or sanctioned jurisdictions. On first connect you will be asked to sign a message accepting the [Terms of Service](terms.md) and confirming your eligibility.
 {% endhint %}

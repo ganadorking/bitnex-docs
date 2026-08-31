@@ -67,5 +67,5 @@ Estimated PnL at the trigger level is shown as you configure it, so you know wha
 - **Combine with stop orders.** For more control over execution, Pro also offers standalone Stop Market and Stop Limit orders — see [Order Types](order-types.md).
 
 {% hint style="success" %}
-TP/SL orders are managed by the underlying on-chain exchange protocol, so they remain active even if you close the Bitnex tab or disconnect your wallet.
+TP/SL orders are managed by the underlying on-chain exchange protocol, so they remain active even if you close the Dasus tab or disconnect your wallet.
 {% endhint %}

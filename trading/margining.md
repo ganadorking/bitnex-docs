@@ -1,6 +1,6 @@
 # Margin & Leverage
 
-Margin is the collateral that backs your leveraged positions. On Bitnex, margin is managed entirely by the underlying on-chain exchange protocol — your funds stay in your own on-chain trading account, and the protocol enforces margin requirements transparently. This page explains how margin modes work, how leverage affects your risk, and how to adjust both.
+Margin is the collateral that backs your leveraged positions. On Dasus, margin is managed entirely by the underlying on-chain exchange protocol — your funds stay in your own on-chain trading account, and the protocol enforces margin requirements transparently. This page explains how margin modes work, how leverage affects your risk, and how to adjust both.
 
 {% hint style="info" %}
 New to leveraged trading? Start with small position sizes and low leverage, and always check your estimated liquidation price in Order Details before confirming a trade. See [Liquidation](liquidation.md) for how liquidations work.
@@ -20,7 +20,7 @@ Your margin usage and available balance are always visible in the order form and
 
 ## Cross vs. isolated margin
 
-Bitnex supports two margin modes:
+Dasus supports two margin modes:
 
 | | Cross margin | Isolated margin |
 |---|---|---|
@@ -34,7 +34,7 @@ Bitnex supports two margin modes:
 
 With cross margin, all of your positions share your account balance as collateral. Unrealized profits on one position can offset losses on another, which makes liquidation less likely for any single position — but a large loss can consume your whole account balance.
 
-Cross margin is the default mode everywhere on Bitnex, and the only mode in [Lite](../platform/lite-mode.md).
+Cross margin is the default mode everywhere on Dasus, and the only mode in [Lite](../platform/lite-mode.md).
 
 ### Isolated margin (Pro)
 
@@ -82,7 +82,7 @@ Keep an eye on these figures, shown in the order form, the positions tab, and yo
 - **Estimated liquidation price** — shown before you place an order and on every open position.
 - **Unrealized PnL** — moves with the mark price and affects your cross-margin health.
 
-Because Bitnex uses a unified balance for perps and spot (see [Funding Your Account](../platform/funding-account.md)), your full trading account is visible in one place.
+Because Dasus uses a unified balance for perps and spot (see [Funding Your Account](../platform/funding-account.md)), your full trading account is visible in one place.
 
 ## Related pages
 

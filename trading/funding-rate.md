@@ -2,7 +2,7 @@
 
 Perpetual futures never expire — there is no settlement date that forces the contract price back in line with the asset's real market price. The **funding rate** is the mechanism that does this job instead: a small, periodic payment exchanged between long and short position holders that keeps each perp's price anchored to its underlying index/oracle price.
 
-Funding is paid **peer-to-peer** between traders through the underlying on-chain exchange protocol. **Bitnex does not receive any part of funding payments** — it is not a fee.
+Funding is paid **peer-to-peer** between traders through the underlying on-chain exchange protocol. **Dasus does not receive any part of funding payments** — it is not a fee.
 
 ## Why perps need funding
 
@@ -24,14 +24,14 @@ Key points:
 
 - Funding is exchanged **periodically** at set intervals determined by the underlying protocol. You only pay or receive funding if you hold an open position **at the moment funding is applied**.
 - The amount is proportional to your **position size (notional value)**, not your margin. A highly leveraged position pays or receives funding on its full notional value.
-- Payments settle directly between traders on-chain. Neither Bitnex nor the underlying protocol keeps the funding paid by the losing side of the rate.
+- Payments settle directly between traders on-chain. Neither Dasus nor the underlying protocol keeps the funding paid by the losing side of the rate.
 - The rate is calculated per market by the underlying protocol, based on the gap between the perp's price and the index/oracle price.
 
 {% hint style="info" %}
 Funding can work **for** you. If you hold a position on the receiving side of the rate — for example, a short while funding is positive — you collect funding payments for as long as the conditions persist.
 {% endhint %}
 
-## Where to see funding on Bitnex
+## Where to see funding on Dasus
 
 - **Market header** — the current funding rate for the selected market is displayed in the stats bar at the top of the [trading interface](interface.md), alongside mark price, oracle price, 24h volume and open interest.
 - **Markets list** — compare funding rates across markets when choosing what to trade.

@@ -4,10 +4,10 @@
 
 ## What it is
 
-Guardian Mode lets you set your own risk limits, and Bitnex enforces them **before you sign an order**. You decide the rules once, when you're calm; they apply every time, including the times you'd rather they didn't.
+Guardian Mode lets you set your own risk limits, and Dasus enforces them **before you sign an order**. You decide the rules once, when you're calm; they apply every time, including the times you'd rather they didn't.
 
 {% hint style="warning" %}
-**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order breaking your rules is placed from Bitnex**. We will never tell you it makes losses impossible.
+**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order breaking your rules is placed from Dasus**. We will never tell you it makes losses impossible.
 {% endhint %}
 
 **Guardian never blocks you from closing a position or setting a stop.** Only orders that open or increase exposure are evaluated. A limit that traps you in a trade would be worse than no limit at all.

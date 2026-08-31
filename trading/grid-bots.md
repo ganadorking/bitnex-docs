@@ -33,7 +33,7 @@ A few practical notes:
 
 - Set the range around where you actually expect price to trade. A range that is too wide leaves capital idle at levels that never fill; a range that is too narrow gets exited quickly.
 - Each sub-order in the grid must meet the protocol's minimum order size. If your investment is small and your level count is high, individual orders may fall below the minimum — reduce the number of levels or increase the investment.
-- The estimated cost and details are shown before you confirm, as with any order on Bitnex.
+- The estimated cost and details are shown before you confirm, as with any order on Dasus.
 
 ## Monitoring a running bot
 

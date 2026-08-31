@@ -1,6 +1,6 @@
 # Fees
 
-Bitnex uses a transparent, volume-based fee model. Every trade pays a single all-in trading fee that combines the base fee of the underlying on-chain exchange protocol with a small Bitnex platform fee — there are no hidden charges, no deposit fees from Bitnex, and no fee surprises after the fact. The exact cost of every order is shown to you **before** you confirm it.
+Dasus uses a transparent, volume-based fee model. Every trade pays a single all-in trading fee that combines the base fee of the underlying on-chain exchange protocol with a small Dasus platform fee — there are no hidden charges, no deposit fees from Dasus, and no fee surprises after the fact. The exact cost of every order is shown to you **before** you confirm it.
 
 ![Fee schedule](../.gitbook/assets/fees.png)
 
@@ -10,7 +10,7 @@ Fee rates are subject to change and vary by tier and market type (perps vs. spot
 
 ## Maker vs. taker
 
-Like every professional exchange, Bitnex distinguishes between orders that **add** liquidity to the order book and orders that **remove** it:
+Like every professional exchange, Dasus distinguishes between orders that **add** liquidity to the order book and orders that **remove** it:
 
 | Role | What it means | Typical orders |
 | --- | --- | --- |
@@ -37,12 +37,12 @@ Your fee rate depends on your **rolling 14-day trading volume**. The more you tr
 The rates you see in the app are **all-in**. Each displayed rate already includes:
 
 1. The base trading fee of the underlying on-chain exchange protocol, and
-2. The Bitnex platform fee, which funds the development and operation of the interface.
+2. The Dasus platform fee, which funds the development and operation of the interface.
 
 You will never be charged more than the rate displayed at the time of your order. There is no separate "interface fee" line added afterwards.
 
 {% hint style="info" %}
-**Funding payments are not fees.** On perpetual markets, funding is exchanged peer-to-peer between longs and shorts — Bitnex does not receive any part of it. See [Funding Rate](../trading/funding-rate.md).
+**Funding payments are not fees.** On perpetual markets, funding is exchanged peer-to-peer between longs and shorts — Dasus does not receive any part of it. See [Funding Rate](../trading/funding-rate.md).
 {% endhint %}
 
 ## Where to see your fees
@@ -61,7 +61,7 @@ Two ways to pay less:
 
 ### Referral discount
 
-If you joined Bitnex through a referral link or code, you receive a discount on your trading fees. Referrers also earn a share of the fees their invitees pay. See [Referrals](referrals.md).
+If you joined Dasus through a referral link or code, you receive a discount on your trading fees. Referrers also earn a share of the fees their invitees pay. See [Referrals](referrals.md).
 
 ### Staking discount
 
@@ -74,7 +74,7 @@ Discounts stack with your volume tier: your effective rate is your tier rate adj
 ## Other costs to know about
 
 - **Gasless trading** — once trading is enabled, placing, modifying, and cancelling orders costs no gas. See [Enable Trading](../guides/enable-trading.md).
-- **Deposits & withdrawals** — Bitnex does not charge deposit fees. Bridging USDC from Arbitrum incurs standard network gas on the Arbitrum side; withdrawals back to Arbitrum may incur a small protocol-level processing cost, shown before you confirm. See [Funding Your Account](funding-account.md).
+- **Deposits & withdrawals** — Dasus does not charge deposit fees. Bridging USDC from Arbitrum incurs standard network gas on the Arbitrum side; withdrawals back to Arbitrum may incur a small protocol-level processing cost, shown before you confirm. See [Funding Your Account](funding-account.md).
 - **Liquidations** — closing a position via liquidation is handled by the underlying protocol and can be significantly more costly than closing it yourself. Manage risk proactively; see [Liquidation](../trading/liquidation.md).
 
 ## FAQ
@@ -98,4 +98,4 @@ Following Hyperliquid's HIP-4 network upgrade, outcome markets charge protocol f
 - **Opening a position is free** — the protocol fee is charged **only when you close or get liquidated**.
 - The average outcome fee is **about half** of a regular market's (for example, a Tier-0 taker pays ~0.07% on close).
 - The exact scale is set per market by its deployer.
-- The Bitnex platform fee applies per order as usual and is always shown in the order form before you confirm.
+- The Dasus platform fee applies per order as usual and is always shown in the order form before you confirm.

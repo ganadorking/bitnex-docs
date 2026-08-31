@@ -1,25 +1,25 @@
 # Frequently Asked Questions
 
-Quick answers to the most common questions about Bitnex. If you can't find what you're looking for here, check the rest of the docs or reach out through our [official channels](others/official-links.md).
+Quick answers to the most common questions about Dasus. If you can't find what you're looking for here, check the rest of the docs or reach out through our [official channels](others/official-links.md).
 
 ## General
 
-### What is Bitnex?
+### What is Dasus?
 
-Bitnex is a non-custodial trading platform for perpetual futures and spot markets. It is a front-end interface built on top of a high-performance decentralized on-chain exchange protocol, which provides the liquidity, order matching (a full on-chain central limit order book), custody, and settlement. Bitnex gives you a fast, polished interface to trade on that infrastructure — in [Lite](platform/lite-mode.md) or [Pro](platform/web-terminal.md) mode.
+Dasus is a non-custodial trading platform for perpetual futures and spot markets. It is a front-end interface built on top of a high-performance decentralized on-chain exchange protocol, which provides the liquidity, order matching (a full on-chain central limit order book), custody, and settlement. Dasus gives you a fast, polished interface to trade on that infrastructure — in [Lite](platform/lite-mode.md) or [Pro](platform/web-terminal.md) mode.
 
-### Is Bitnex custodial? Who holds my funds?
+### Is Dasus custodial? Who holds my funds?
 
-No. Bitnex never holds your funds. Your assets are held by the underlying protocol's on-chain system and remain under your control at all times. Bitnex is an interface: it helps you view markets, build orders, and sign transactions — it cannot access or move your money.
+No. Dasus never holds your funds. Your assets are held by the underlying protocol's on-chain system and remain under your control at all times. Dasus is an interface: it helps you view markets, build orders, and sign transactions — it cannot access or move your money.
 
 ### Do I need to sign up or complete KYC?
 
-No traditional sign-up and no KYC on Bitnex. You connect a wallet (or create an embedded self-custodial wallet with your email or Google account) and start trading. See [Getting Started](getting-started.md).
+No traditional sign-up and no KYC on Dasus. You connect a wallet (or create an embedded self-custodial wallet with your email or Google account) and start trading. See [Getting Started](getting-started.md).
 
-### Is Bitnex available in my country?
+### Is Dasus available in my country?
 
 {% hint style="warning" %}
-Bitnex is **not available to U.S. persons** or to residents of restricted or sanctioned jurisdictions. On first connect you sign a message accepting the [Terms of Service](terms.md) and confirming you are not a U.S. person.
+Dasus is **not available to U.S. persons** or to residents of restricted or sanctioned jurisdictions. On first connect you sign a message accepting the [Terms of Service](terms.md) and confirming you are not a U.S. person.
 {% endhint %}
 
 ## Getting started
@@ -78,7 +78,7 @@ Leverage is adjustable per market up to that market's maximum, which is shown in
 
 ### What is the funding rate?
 
-A periodic payment between longs and shorts that keeps the perp price anchored to the underlying index/oracle price. When the rate is **positive, longs pay shorts**; when **negative, shorts pay longs**. Funding is paid peer-to-peer between traders — Bitnex does not receive any of it. The current rate is shown per market in the app. See [Funding Rate](trading/funding-rate.md).
+A periodic payment between longs and shorts that keeps the perp price anchored to the underlying index/oracle price. When the rate is **positive, longs pay shorts**; when **negative, shorts pay longs**. Funding is paid peer-to-peer between traders — Dasus does not receive any of it. The current rate is shown per market in the app. See [Funding Rate](trading/funding-rate.md).
 
 ### How does liquidation work?
 
@@ -104,7 +104,7 @@ Automated grid trading strategies you configure and run from the app: set a pric
 
 ### What are the fees?
 
-Bitnex adds a small platform fee on top of the underlying protocol's base trading fees. Rates follow a **maker/taker** model with **volume-based tiers**. The full fee schedule and your current tier are shown in the app on the [Fees](platform/fees.md) page, and the exact cost of every trade is displayed in Order Details **before** you confirm.
+Dasus adds a small platform fee on top of the underlying protocol's base trading fees. Rates follow a **maker/taker** model with **volume-based tiers**. The full fee schedule and your current tier are shown in the app on the [Fees](platform/fees.md) page, and the exact cost of every trade is displayed in Order Details **before** you confirm.
 
 ### Can I reduce my fees?
 
@@ -122,13 +122,13 @@ You can stake the protocol's native token to validators directly from the app. R
 
 ## Platform & access
 
-### Can I use Bitnex on my phone?
+### Can I use Dasus on my phone?
 
-Yes — the Bitnex web app is fully responsive and works in your mobile browser, in both Lite and Pro modes. There is no native mobile app at this time.
+Yes — the Dasus web app is fully responsive and works in your mobile browser, in both Lite and Pro modes. There is no native mobile app at this time.
 
 ### Is there an API or mobile app?
 
-There is **no public API** for now, and no native mobile app — Bitnex is web only. Everything runs in the browser on desktop and mobile.
+There is **no public API** for now, and no native mobile app — Dasus is web only. Everything runs in the browser on desktop and mobile.
 
 ### What's the difference between Lite and Pro?
 
@@ -145,6 +145,6 @@ The [Portfolio](platform/portfolio.md) page shows total equity, a PnL-over-time 
 
 Invite friends with your referral link or code and earn a share of the trading fees they pay; they can get a fee discount for joining through you. Creating a code requires meeting a trading-volume threshold set by the protocol. Rewards are claimable in the app. See [Referrals](platform/referrals.md).
 
-### How do I know I'm on the real Bitnex?
+### How do I know I'm on the real Dasus?
 
-Always double-check the URL — **bitnex.pro** — and only trust links listed on our [Official Links](others/official-links.md) page. Bitnex will never DM you first or ask for your seed phrase or private keys.
+Always double-check the URL — **dasus.xyz** — and only trust links listed on our [Official Links](others/official-links.md) page. Dasus will never DM you first or ask for your seed phrase or private keys.

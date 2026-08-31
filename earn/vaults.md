@@ -8,9 +8,9 @@ Vaults let you put your capital to work by following the strategies of experienc
 
 A vault is an on-chain pool of capital managed by a **vault leader** — a trader who runs a strategy using the pooled funds. As a depositor, you share in the vault's profit and loss in proportion to your deposit.
 
-- **On-chain and transparent** — vault balances, positions, and performance live on the underlying protocol, not on Bitnex servers. What you see is what the vault actually did.
+- **On-chain and transparent** — vault balances, positions, and performance live on the underlying protocol, not on Dasus servers. What you see is what the vault actually did.
 - **Copy-trading style** — instead of mirroring individual trades in your own account, you deposit into the pool and the leader trades it as one book.
-- **Non-custodial by design** — Bitnex never holds vault funds. Deposits, withdrawals, and settlement are handled entirely by the underlying protocol's on-chain system.
+- **Non-custodial by design** — Dasus never holds vault funds. Deposits, withdrawals, and settlement are handled entirely by the underlying protocol's on-chain system.
 
 {% hint style="info" %}
 You don't need to enable trading or place any orders yourself to use vaults — you only need funds in your account. See [Funding Your Account](../platform/funding-account.md) if you haven't deposited yet.

@@ -2,7 +2,7 @@
 
 Sub-accounts let you split your capital into isolated compartments under one master account — one per strategy, each with its own positions, margin and liquidations. They live on Hyperliquid under your master account: same non-custodial custody, and they show up identically on any Hyperliquid frontend.
 
-## What you can do on Bitnex
+## What you can do on Dasus
 
 * **Create** a sub-account (just a name — your agent signs, no popup).
 * **Rename** it at any time (pencil icon next to the name).

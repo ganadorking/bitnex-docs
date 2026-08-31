@@ -1,8 +1,8 @@
 # Copy Trading Terms
 
-**Version:** v1-2026-08 · **Last updated:** August 14, 2026
+**Version:** v2-2026-08 · **Last updated:** August 31, 2026
 
-These Copy Trading Terms (the "Copy Terms") govern the copy trading feature of the Bitnex interface. They supplement the [Terms of Service](../terms.md) and the [Risk Disclosure Statement](risk-disclosure.md). Before your first copy, Bitnex asks you to accept these terms by **signing a message with your wallet**; the signed record (address, version, timestamp) is stored as cryptographic proof of acceptance, and the full canonical text is displayed by your wallet at the moment of signing.
+These Copy Trading Terms (the "Copy Terms") govern the copy trading feature of the Dasus interface. They supplement the [Terms of Service](../terms.md) and the [Risk Disclosure Statement](risk-disclosure.md). Before your first copy, Dasus asks you to accept these terms by **signing a message with your wallet**; the signed record (address, version, timestamp) is stored as cryptographic proof of acceptance, and the full canonical text is displayed by your wallet at the moment of signing.
 
 {% hint style="danger" %}
 Copy trading places **real orders in your account** and can generate losses, including the **partial or total loss** of the capital you allocate.
@@ -10,14 +10,14 @@ Copy trading places **real orders in your account** and can generate losses, inc
 
 ## 1. Nature of the service
 
-1. Copy trading is an **automation tool**: the Bitnex engine observes the public on-chain activity of the trader you select and mirrors their **new** position changes into your account, proportionally to your allocation and within the risk limits you configure.
-2. Bitnex is **not** a fund manager, portfolio manager, investment advisor, or fiduciary. The selection of a trader — and the decision to start, adjust, or stop a copy — is **exclusively yours**.
-3. The traders you can copy are **not** employed, vetted, endorsed, or supervised by Bitnex. Statistics shown on their profiles are computed from public on-chain data and can be delayed, incomplete, or wrong.
+1. Copy trading is an **automation tool**: the Dasus engine observes the public on-chain activity of the trader you select and mirrors their **new** position changes into your account, proportionally to your allocation and within the risk limits you configure.
+2. Dasus is **not** a fund manager, portfolio manager, investment advisor, or fiduciary. The selection of a trader — and the decision to start, adjust, or stop a copy — is **exclusively yours**.
+3. The traders you can copy are **not** employed, vetted, endorsed, or supervised by Dasus. Statistics shown on their profiles are computed from public on-chain data and can be delayed, incomplete, or wrong.
 
 ## 2. The agent key
 
-1. To execute copies, you approve an **agent key** ("session key") on the Protocol. This key can **only place and manage orders** in your account. It **cannot withdraw or transfer funds** — that restriction is enforced by the Protocol itself, not by Bitnex policy.
-2. The agent key is stored **encrypted** (AES-256-GCM) on Bitnex servers and is used only by the copy engine.
+1. To execute copies, you approve an **agent key** ("session key") on the Protocol. This key can **only place and manage orders** in your account. It **cannot withdraw or transfer funds** — that restriction is enforced by the Protocol itself, not by Dasus policy.
+2. The agent key is stored **encrypted** (AES-256-GCM) on Dasus servers and is used only by the copy engine.
 3. You can **revoke** the agent key at any time on-chain from the interface. Revoking it stops all copying immediately.
 
 ## 3. Execution
@@ -31,15 +31,15 @@ Copy trading places **real orders in your account** and can generate losses, inc
 ## 4. Stopping and its consequences
 
 1. You can stop a copy at any time. **Stopping does not close the positions that are already open** in your account: they remain yours to manage.
-2. Bitnex may pause or terminate the copy engine — globally or for a specific account — for maintenance, security, legal, or operational reasons. Positions already open remain in your account and under your control via the Protocol.
+2. Dasus may pause or terminate the copy engine — globally or for a specific account — for maintenance, security, legal, or operational reasons. Positions already open remain in your account and under your control via the Protocol.
 
 ## 5. Fees
 
-Copied orders pay the same trading fees as your manual orders (the Protocol's fees plus the Bitnex builder fee shown in the app). Bitnex does not currently charge a separate copy-trading fee or profit share; if that changes, it will be shown in the app before you accept it.
+Copied orders pay the same trading fees as your manual orders (the Protocol's fees plus the Dasus builder fee shown in the app). Dasus does not currently charge a separate copy-trading fee or profit share; if that changes, it will be shown in the app before you accept it.
 
 ## 6. No liability for results
 
-To the maximum extent permitted by law, Bitnex is not liable for trading losses arising from copy trading, including losses caused by the copied trader's decisions, execution delays or deviations, skipped or failed orders, engine downtime, or your own configuration. **Past performance of any trader guarantees nothing.**
+To the maximum extent permitted by law, Dasus is not liable for trading losses arising from copy trading, including losses caused by the copied trader's decisions, execution delays or deviations, skipped or failed orders, engine downtime, or your own configuration. **Past performance of any trader guarantees nothing.**
 
 ## 7. Your representations
 
