@@ -13,9 +13,9 @@ Any other domain claiming to be Dasus — including lookalike spellings, extra w
 
 ## Community & support
 
-- **X (Twitter):** _[INSERT LINK]_
-- **Telegram:** _[INSERT LINK]_
-- **Support contact:** _[INSERT LINK]_
+- **X (Twitter):** [@dasus_xyz](https://x.com/dasus_xyz)
+- **Telegram:** [t.me/dasus_xyz](https://t.me/dasus_xyz)
+- **Support:** the in-app support chat, or [ceo@dasus.xyz](mailto:ceo@dasus.xyz)
 
 {% hint style="danger" %}
 **Beware of phishing and impersonators.**
