@@ -41,6 +41,17 @@ The rates you see in the app are **all-in**. Each displayed rate already include
 
 You will never be charged more than the rate displayed at the time of your order. There is no separate "interface fee" line added afterwards.
 
+### Platform fee by mode
+
+The Dasus platform fee depends on the interface you trade from:
+
+| Mode | Perps (taker) | Spot (taker) |
+| --- | --- | --- |
+| **Pro** | 0.050% | 0.50% |
+| **Lite** | 0.10% | 1.00% |
+
+Maker orders (Post Only) pay **40%** of these rates, and volume-based tiers can lower them further. Lite trades at a higher platform rate because it bundles the simplified experience; you can switch to Pro at any time from the same account — same balance, same positions, lower platform fee. Both rates are always visible side by side on the in-app Fees page, and the fee row of every order form shows the exact rate applied to *your* order before you confirm.
+
 {% hint style="info" %}
 **Funding payments are not fees.** On perpetual markets, funding is exchanged peer-to-peer between longs and shorts — Dasus does not receive any part of it. See [Funding Rate](../trading/funding-rate.md).
 {% endhint %}
