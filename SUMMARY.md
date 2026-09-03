@@ -29,6 +29,7 @@
 * [Liquidation](trading/liquidation.md)
 * [Entry Price & PnL](trading/entry-price-pnl.md)
 * [Grid Bots](trading/grid-bots.md)
+* [Prediction Markets (Outcomes)](trading/outcomes.md)
 
 ## Earn
 

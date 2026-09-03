@@ -12,7 +12,7 @@ Copy top traders automatically from Dasus: the engine mirrors their trades into 
 
 1. **Pick a trader** — from the Top 100, the Leaderboard, or by pasting any protocol wallet address (Snipers). Every profile shows real statistics: PnL, ROI, max drawdown, Sharpe, win rate, open positions and history.
 2. **Configure your copy** — allocation in USDC, Copytrade or Inverse mode, max leverage, max entry deviation, auto-stop on loss, and optionally which assets to copy or whether to seed the positions the trader already has open.
-3. **Sign the terms** (once per wallet) and **approve the copy agent key** — a key that can **only trade, never withdraw**, and that you can revoke on-chain whenever you want. If you already have one from a previous copy, "Use existing" asks for no signature at all.
+3. **Sign the terms** (once per wallet; the message you sign names the document version, its SHA-256 hash, the dasus.xyz domain, your wallet and an expiry, so it can't be reused anywhere else) and **approve the copy agent key** — a key that can **only trade, never withdraw**, and that you can revoke on-chain whenever you want. If you already have one from a previous copy, "Use existing" asks for no signature at all.
 4. **The engine copies 24/7** — it mirrors the trader's **new** position changes (opens, increases, reductions, closes **and their TP/SL**), proportional to your allocation. Every copied order is tagged with a "Copy" chip in your tables.
 5. **Pause, adjust or stop whenever you want.** Stopping a copy **does not close your open positions** — they stay in your account and you manage them from your Portfolio.
 

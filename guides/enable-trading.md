@@ -83,3 +83,7 @@ No harm done. Click **Enable Trading**, sign the approval again, and you're back
 - New to Dasus? Start with the full [Getting Started](../getting-started.md) walkthrough.
 - Ready to trade? Explore the available [Order Types](../trading/order-types.md).
 - Questions about costs? Review [Fees](../platform/fees.md) or check the [FAQ](../faq.md).
+
+## Signing the Terms of Service
+
+The first time a wallet connects, Dasus asks you to accept the Terms of Service with a **gas-free signature** (no transaction, nothing moves). The message you sign is explicit about what you are accepting: the document name and **version**, its **SHA-256 hash**, the URL, the **domain** you are signing on (`dasus.xyz`), your wallet, a server-issued nonce and an expiry of a few minutes. A signature therefore cannot be replayed on another site or reused later, and the exact text you signed is stored with your acceptance. When the Terms change, the version changes and you'll be asked to sign again.
