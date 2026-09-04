@@ -68,9 +68,15 @@ You get a modal that names the rule, your limit, and the current value — for e
 
 Warnings are different: nothing is broken, but something is worth a second look. Those you can continue past with one deliberate click.
 
+## What Guardian covers
+
+Guardian checks every order that is signed in your browser before it is sent: the order form (market, limit, stop, scale, TWAP and chase), chart trading and dragged orders, TP/SL, edits to open orders, grid bots, Swap, the staking swap, prediction markets, Lite mode, and sub-accounts or vaults you trade from Dasus. Closing orders (reduce-only) always go through — Guardian never traps you in a position. The Guardian page shows this list so there is no doubt about what is and isn't under your rules.
+
 ## What Guardian does not do
 
-- It does not stop you trading the same account from another client.
+
+- It does not stop you trading the same account from another client (the Hyperliquid app, other frontends, the API).
+- It does not apply to copy trading: the copy engine runs on Dasus servers with its own key, outside your browser.
 - It does not move, hold, or restrict your funds in any way.
 - It does not close positions for you, add stops for you, or act on your account.
 
