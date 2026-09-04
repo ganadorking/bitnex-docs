@@ -16,6 +16,12 @@ Copy top traders automatically from Dasus: the engine mirrors their trades into 
 4. **The engine copies 24/7** — it mirrors the trader's **new** position changes (opens, increases, reductions, closes **and their TP/SL**), proportional to your allocation. Every copied order is tagged with a "Copy" chip in your tables.
 5. **Pause, adjust or stop whenever you want.** Stopping a copy **does not close your open positions** — they stay in your account and you manage them from your Portfolio.
 
+## What you sign, and why
+
+- **Risk disclosure** — a gas-free signature of the full text, once per wallet and version. It records your acceptance; it authorizes nothing on-chain.
+- **Copy agent key** — authorizes a named key ("bitnex-copy") to place and cancel orders for you. By protocol design it cannot withdraw or approve fees.
+- **Platform fee** — the only signature that lets Hyperliquid deduct Dasus's fee from your orders. It is per builder address, capped (max 1%), and asked once the first time you copy. Without it Hyperliquid rejects any order carrying the fee; if that ever happens, the engine retries the copy without the fee rather than losing it.
+
 ## Do I need to keep my wallet connected?
 
 **No.** The copy runs on Dasus servers using the agent key: you don't need your wallet connected, the page open, or your computer switched on. The agent key is stored **encrypted** (AES-256-GCM) and only the engine can use it — and only to trade, never to withdraw funds.
