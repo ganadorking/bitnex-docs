@@ -8,12 +8,13 @@ Dasus Pro supports a full range of order types, from simple market orders to adv
 | **Limit** | Executes only at your specified price or better | You want price control and are willing to wait for a fill |
 | **Stop Market** | Triggers a market order when price reaches your stop price | Cutting losses or entering on a breakout, prioritising execution |
 | **Stop Limit** | Triggers a limit order when price reaches your stop price | Same as Stop Market, but with price control on the fill |
-| **Take Profit** | Triggers an order to close (or open) when price reaches your profit target | Locking in gains automatically without watching the chart |
+| **Take Market / Take Limit** | Triggers an order when price reaches your profit target | Locking in gains automatically without watching the chart |
 | **Scale** | Splits one order into multiple limit orders across a price range | Building or exiting a position gradually across a zone |
-| **TWAP** | Splits one order into slices executed over time | Large orders you want to execute with reduced market impact |
+| **TWAP** | Splits one order into slices executed over time, natively on the protocol | Large orders you want to execute with reduced market impact |
+| **Chase** | A post-only order that automatically re-prices to stay at the front of the book | Getting a maker fill on a moving market without re-quoting by hand |
 
 {% hint style="info" %}
-**Lite mode** offers Market and Limit orders, plus attachable Take Profit / Stop Loss. Switch to **Pro** anytime for the full set — see [The Trading Interface](interface.md).
+**Lite mode** offers Market and Limit orders, plus attachable Take Profit / Stop Loss. Switch to **Pro** anytime for the full set — see [The Trading Interface](interface.md). All of these work on [spot](spot.md) markets too, not just perps.
 {% endhint %}
 
 ### Market
@@ -62,9 +63,9 @@ A stop limit works like a stop market, but places a **limit order** at your chos
 A stop limit protects you from a bad fill price but does **not** guarantee execution. For a stop loss you rely on to prevent [liquidation](liquidation.md), a stop market is generally the safer choice.
 {% endhint %}
 
-### Take Profit
+### Take Profit (Take Market / Take Limit)
 
-A take profit order triggers when the market reaches your profit target and closes some or all of your position. On Dasus you can:
+A take profit order triggers when the market reaches your profit target and closes some or all of your position. **Take Market** fills at market when triggered; **Take Limit** places a limit order at your chosen price instead — the same trade-off as Stop Market vs. Stop Limit. On Dasus you can:
 
 - Attach a TP to a new order at placement time.
 - Add or edit a TP on an existing position — full or partial size, defined by price or by gain %.
@@ -76,7 +77,7 @@ For the full workflow, see [Take Profit & Stop Loss](tp-sl.md).
 
 ### Scale
 
-A scale order splits a single order into multiple limit orders distributed across a price range you define — a start price, an end price, and the number of sub-orders. You can also apply a **size skew** to weight more size toward one end of the range. Each sub-order must meet the protocol's minimum order size.
+A scale order splits a single order into multiple limit orders (2 to 20) distributed across a price range you define — a start price, an end price, and the number of sub-orders. You can also apply a **size skew** to weight more size toward one end of the range. Each sub-order must meet the protocol's minimum order size.
 
 **Example:** Instead of one limit buy at $3,380, you scale-buy ETH from $3,400 down to $3,300 across 10 orders, skewed so larger sizes sit at the lower prices. You accumulate progressively into weakness with a better blended entry.
 
@@ -88,7 +89,21 @@ A TWAP (time-weighted average price) order splits your total size into slices ex
 
 **Example:** You want to buy a position that is large relative to the book's current depth. Rather than sweeping the asks in one market order, you run a TWAP over 30 minutes and the order executes in evenly spaced slices, targeting the average price over that window.
 
-Running TWAPs appear in the **TWAP** tab of the Pro terminal, where you can monitor progress or terminate them early. Full details: [TWAP Orders](twap.md).
+Running TWAPs appear in the **TWAP** tab of the Pro terminal, where you can monitor progress or terminate them early. A TWAP requires a minimum of **$100** notional, runs for 5 minutes to 24 hours, and carries **no Dasus platform fee**. Full details: [TWAP Orders](twap.md).
+
+### Chase
+
+A chase order rests a **post-only limit** at the front of the book on your side and automatically **re-prices it** as the best bid/offer moves, so it keeps following the market without ever crossing the spread. Every fill it gets is a maker fill.
+
+- **Offset** — how far behind the best bid/ask to rest. `0` keeps you at the front of the book; a larger offset trades fill probability for a better price.
+- **Max chase distance** — how far the chase is allowed to follow the price away from where it started. Beyond that, it stops.
+- **Re-pegs and filled size** are shown live in the **Chase** tab of the bottom panel, where you can stop it at any time.
+
+{% hint style="warning" %}
+**A chase runs in your browser tab.** Close the tab, switch markets or stop the chase and the re-pricing ends — but the order already resting on the book **stays open as a normal limit order**. Cancel it from Open Orders if you don't want it. The order form runs one chase at a time.
+{% endhint %}
+
+**Example:** you want to buy ETH as a maker while the price drifts up. Instead of cancelling and re-placing your limit every few seconds, you start a chase: it keeps your bid at the front of the book, filling at maker rates, until it's done or the price runs past your maximum distance.
 
 ---
 

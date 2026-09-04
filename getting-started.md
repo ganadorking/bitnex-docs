@@ -23,7 +23,7 @@ Either way, there is no account registration form and no KYC process on Dasus.
 
 On your first connection, you'll be asked to sign a message with your wallet. This signature:
 
-* Confirms you accept the [Terms of Service](terms.md) (v1.0.0).
+* Confirms you accept the [Terms of Service](terms.md) (current version 2.0.0).
 * Confirms you are **not a U.S. person**.
 
 Signing this message is free — it's an off-chain signature, not a transaction, and costs no gas.
@@ -69,7 +69,7 @@ You're ready to trade. Pick the view that suits you — you can switch anytime:
 
 A simple first trade:
 
-1. Select a market (e.g. BTC).
+1. Select a market (e.g. BTC). Beyond crypto perps and spot, Dasus also lists stock, index, commodity and FX perps — browse them all on the [Markets](platform/markets.md) page.
 2. Choose **Buy/Long** or **Sell/Short**.
 3. Enter your size and, for perps, set your leverage.
 4. Review **Order Details** — estimated cost, fees, and estimated liquidation price are all shown **before** you confirm.
@@ -95,4 +95,12 @@ Leveraged trading carries real risk. If your margin falls below the maintenance 
 ## Next steps
 
 * Explore the full terminal in [The Trading Interface](trading/interface.md).
+* Browse everything tradable on the [Markets](platform/markets.md) page, or see the day at a glance on the Heatmap.
+* Review your results day by day in the [PnL Calendar](platform/calendar.md).
+* Put idle capital to work in [Earn](earn/lend-borrow.md), [Vaults](earn/vaults.md) or [Staking](earn/staking.md).
+* Invite traders and earn a share of the fees they generate — see [Referrals](platform/referrals.md).
 * Have questions? Check the [FAQ](faq.md).
+
+{% hint style="info" %}
+**The app speaks your language.** Dasus is available in English, Spanish, French, Korean and Chinese — switch from the settings menu at any time.
+{% endhint %}

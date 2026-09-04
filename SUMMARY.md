@@ -7,20 +7,25 @@
 
 * [Web Terminal (Pro)](platform/web-terminal.md)
 * [Lite Mode](platform/lite-mode.md)
+* [Markets](platform/markets.md)
 * [Funding Your Account](platform/funding-account.md)
 * [Fees](platform/fees.md)
 * [Portfolio](platform/portfolio.md)
+* [PnL Calendar](platform/calendar.md)
 * [Sub-Accounts](platform/sub-accounts.md)
 * [Swap](platform/swap.md)
 * [Referral Program](platform/referrals.md)
 * [Communities](platform/communities.md)
 * [Copy Trading](platform/copy-trading.md)
 * [Guardian Mode](platform/guardian-mode.md)
+* [Leaderboard](platform/leaderboard.md)
+* [Explorer & Track](platform/explorer.md)
 
 ## Trading
 
 * [Trading Interface](trading/interface.md)
 * [Order Types](trading/order-types.md)
+* [Spot Trading](trading/spot.md)
 * [Scale Orders](trading/scale-orders.md)
 * [TWAP Orders](trading/twap.md)
 * [Take Profit / Stop Loss](trading/tp-sl.md)
@@ -35,6 +40,7 @@
 
 * [Vaults](earn/vaults.md)
 * [Staking](earn/staking.md)
+* [Lend & Borrow](earn/lend-borrow.md)
 
 ## Guides & FAQ
 

@@ -1,62 +1,80 @@
 # Referral Program
 
-Earn rewards by bringing new traders to Dasus. The Referral Program lets you share your personal referral link or code with friends and earn a share of the trading fees they pay — while they can benefit from a fee discount for signing up through you.
+Invite traders to Dasus and earn a share of the platform fees they generate — from **20% up to 60%**, paid in USDC and claimable whenever you like.
 
 ![Referrals](../.gitbook/assets/referrals.png)
 
-## How It Works
+## How it works
 
-1. **Create your referral code** — Head to the Referrals page in the app and create your unique code. Creating a code requires meeting a trading-volume threshold set by the underlying protocol; your progress toward the threshold is shown in the app.
-2. **Share your link** — Every code comes with a shareable referral link. Send it to friends, post it to your community, or share it on social media.
-3. **They trade, you earn** — When someone connects through your link and trades on Dasus, you earn a share of the trading fees they generate.
-4. **Claim your rewards** — Accrued rewards are visible on the Referrals page and are claimable directly in the app.
+1. **Create your code** — open **Referrals**, pick a name (3–20 letters or numbers) and it's live instantly. No trading volume required first.
+2. **Share your link** — every code comes with a link. Anyone who joins through it stays linked to you permanently.
+3. **They trade, you earn** — you receive a percentage of the Dasus platform fee their trading generates, on perps and spot alike.
+4. **Claim** — claim your accrued rewards in USDC straight from the page. They land in your trading balance, ready to trade or withdraw.
 
 {% hint style="info" %}
-The exact reward share and referee discount rates are displayed on the Referrals page in the app. Rates are set by the program and may be updated over time.
+Your rewards come out of the **Dasus platform fee** — the share of a trade's cost that Dasus earns. Your invitee is not charged anything extra for joining through you; they pay the same schedule as everyone else. See [Fees](fees.md).
 {% endhint %}
 
-## What You Earn
+## What you earn
 
-| Role | Benefit |
+Your share scales with the **30-day trading volume of the people you referred** — not with your own trading. The program rewards bringing traders, not being one:
+
+| Referred 30-day volume | Your share of the platform fee |
 | --- | --- |
-| **Referrer (you)** | A share of the trading fees paid by every user who joins through your link or code |
-| **Referee (your friend)** | A discount on their trading fees for joining through a referral |
-
-Rewards accrue automatically as your referred users trade — both on perpetuals and spot markets. There is nothing to configure after the referral is registered.
-
-## Creating Your Code
-
-- Open the **Referrals** page in the app.
-- If you haven't yet met the trading-volume threshold, the page shows how much volume you still need. Any trading you do on Dasus counts toward it — see [Getting Started](../getting-started.md) if you're new.
-- Once eligible, choose a custom code (this becomes part of your referral link) and confirm.
-
-{% hint style="warning" %}
-Referral codes are registered on-chain by the underlying protocol, so a code generally cannot be changed after it is created. Choose it carefully.
-{% endhint %}
-
-## Tracking & Claiming Rewards
-
-The Referrals page shows everything you need to monitor your program:
-
-- **Your code and link** — copy and share with one click.
-- **Referred users** — how many traders have joined through your link.
-- **Referred volume** — the total trading volume your referees have generated.
-- **Unclaimed rewards** — your accrued fee share, claimable in the app whenever you like.
-
-Claimed rewards are credited to your trading account balance, where you can trade with them or withdraw them like any other funds — see [Funding Your Account](funding-account.md).
-
-## Good to Know
-
-- A user can only be referred once, and typically must enter the code before or shortly after they start trading — the app will indicate whether a code can still be applied.
-- Referral rewards are calculated from the fees your referees actually pay. For background on how trading fees work, see [Fees](fees.md).
-- Self-referrals are not supported and won't generate rewards.
+| $0 | 20% |
+| > $1M | 30% |
+| > $25M | 40% |
+| > $100M | 50% |
+| > $500M | 60% |
 
 {% hint style="success" %}
-The bigger and more active your referred community, the more you earn — there is no cap on the number of users you can refer.
+**Your tier never goes down.** Once you reach a level, it's yours — a quiet month for your referrals doesn't demote you.
 {% endhint %}
 
-## Related Pages
+The Referrals page shows your current percentage, your referred volume, and how much more is needed to reach the next tier.
 
-- [Fees](fees.md) — how maker/taker fees and volume tiers work
-- [Getting Started](../getting-started.md) — onboarding a new user from zero to first trade
+## Claiming rewards
+
+- Rewards accrue automatically from on-chain fill data — there is nothing to configure once a referral is registered.
+- Claim from the Referrals page at any time. Rewards are paid as **USDC into your trading balance**, where you can trade with them or [withdraw](funding-account.md) them like any other funds.
+- There is a small **minimum per claim** (shown on the page) and a daily payout limit. If you hit the daily limit, the remainder stays in your balance and can be claimed the next day.
+- **Claim History** lists every payout, with its transaction reference.
+
+## Building a network
+
+An invitee who creates their own code becomes an affiliate in your network. You can pass part of your commission down to them:
+
+- Open the **Their share** control on any referral row and set the percentage of your commission they receive.
+- Dasus pays each of you **separately** — you are not paying them out of pocket, and their share is deducted from your own commission before your claimable balance is calculated.
+- They can pass part of their share further down, **up to 3 levels**.
+
+Your Referrals page shows both streams: what your direct traders generate, and what comes to you through your sub-affiliates' codes.
+
+{% hint style="info" %}
+Deals above the public 60% ceiling exist for large partners and are agreed individually — they are not part of the automatic tier ladder. Get in touch through the [official channels](../others/official-links.md) if that's you.
+{% endhint %}
+
+## Tracking your referrals
+
+The referrals table lists, for every trader you brought in:
+
+- **Address** and **join date**
+- **Total volume** they've traded
+- **Fees paid**
+- **Your rewards** from them
+- **Their share**, if you've set one
+
+You can search, sort and paginate the table, and switch to the **Claim History** tab for your payouts.
+
+## Good to know
+
+- A trader can only be referred **once**, and the code has to be applied when they join — the app shows whether a code can still be applied to an account.
+- Self-referrals don't generate rewards.
+- Rewards are calculated from the platform fees your referees **actually pay**. For how those fees work, see [Fees](fees.md).
+- There is no cap on how many people you can refer.
+
+## Related pages
+
+- [Fees](fees.md) — how maker/taker rates, volume tiers and discounts work
+- [Getting Started](../getting-started.md) — what a new invitee has to do to place their first trade
 - [Portfolio](portfolio.md) — track balances, PnL and account history

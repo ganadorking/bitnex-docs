@@ -17,3 +17,9 @@ Sub-accounts let you split your capital into isolated compartments under one mas
 {% hint style="warning" %}
 **Careful when copying a sub-account address.** These addresses are generated on the Hyperliquid L1. **Do not send funds directly to them — the funds will be lost.** Always use the **Transfer** button to move USDC between master and sub.
 {% endhint %}
+
+## Related pages
+
+- [Portfolio](portfolio.md) — your main account's equity and tables (the page tells you when you're trading as a sub-account)
+- [Fees](fees.md) — how volume tiers are counted across the account family
+- [Funding Your Account](funding-account.md) — deposits, withdrawals and account types

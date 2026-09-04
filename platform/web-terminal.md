@@ -20,7 +20,7 @@ The bar at the top of the terminal shows the vital stats for the selected market
 - **Open interest** — the total size of open positions in the market.
 - **Funding** — the current funding rate and countdown to the next funding payment. See [Funding Rate](../trading/funding-rate.md) for how it works.
 
-Click the market name to open the market selector and search across dozens of perp and spot markets.
+Click the market name to open the market selector and search across hundreds of perp and spot markets — crypto, stocks, indices, commodities and FX. The full catalogue lives on the [Markets](markets.md) page.
 
 ## Chart
 
@@ -42,7 +42,8 @@ The **recent trades** feed streams every execution in the market in real time �
 
 The order form is where you build and place trades:
 
-- **Order types** — Market, Limit (with time-in-force options), Stop Market / Stop Limit, Take Profit, Scale and TWAP. See [Order Types](../trading/order-types.md) for a full comparison, plus dedicated pages for [Scale Orders](../trading/scale-orders.md) and [TWAP](../trading/twap.md).
+- **Order types** — Market, Limit (with time-in-force options), Stop Market / Stop Limit, Take Market / Take Limit, Scale, TWAP and Chase. See [Order Types](../trading/order-types.md) for a full comparison, plus dedicated pages for [Scale Orders](../trading/scale-orders.md) and [TWAP](../trading/twap.md).
+- **Account type** — Unified, Portfolio Margin or Standard/Manual collateral. See [Funding Your Account](funding-account.md#account-type).
 - **Leverage** — adjustable per market up to that market's maximum, shown in the app.
 - **Margin mode** — cross margin by default, with isolated margin available on supported markets. See [Margining](../trading/margining.md).
 - **Reduce-only** — restrict an order so it can only decrease an existing position, never open or flip one.
@@ -65,10 +66,13 @@ The panel below the chart keeps your full account context in view while you trad
 | **Balances** | Your unified perps + spot balances and available margin |
 | **Positions** | Open positions with entry price, mark price, unrealized PnL, ROE %, liquidation price and TP/SL controls |
 | **Open Orders** | Resting orders, editable and cancellable individually or in bulk |
-| **TWAP** | Active TWAP orders and their execution progress |
+| **Outcomes** | Your positions in [prediction markets](../trading/outcomes.md) |
+| **TWAP** | Active TWAP orders and their execution progress, plus history and fills |
+| **Chase** | Running chase orders, their re-pegs and filled size |
 | **Trade History** | Your past fills with price, size and fees |
 | **Funding History** | Funding payments paid or received on your perp positions |
 | **Order History** | A complete log of placed, filled and cancelled orders |
+| **Deposits and Withdrawals** | Movements in and out of your account |
 
 For how entry price, PnL and ROE are calculated, see [Entry Price & PnL](../trading/entry-price-pnl.md).
 

@@ -22,7 +22,23 @@ Deposits are made by bridging USDC from Arbitrum into your trading account:
 
 ### Unified balance
 
-Your deposited USDC lands in a single account balance shared between **perps and spot**. There is no need to transfer funds between sub-accounts to switch markets — the same balance backs your perp margin and your spot purchases. You can see the full breakdown (perps, spot, vaults, staking) in your [Portfolio](portfolio.md).
+Your deposited USDC lands in a single account balance shared between **perps and spot**. There is no need to transfer funds between sub-accounts to switch markets — the same balance backs your perp margin and your spot purchases. You can see the full breakdown (perps, spot, vaults, staking, Earn) in your [Portfolio](portfolio.md).
+
+## Account type
+
+The **Account Type** control in the order form decides how your collateral is organised. Most people should leave it on Unified:
+
+| Type | How it works | Who it's for |
+| --- | --- | --- |
+| **Unified** *(recommended)* | One USDC balance backs everything: crypto perps, stock/commodity/FX perps and spot. Nothing to transfer. | Almost everyone — and required if you want to trade TradFi perps with your normal balance |
+| **Portfolio Margin** | Maximum capital efficiency: HYPE, BTC, USDC and USDT all count as collateral, with spot and perps together. In beta, with an account-value limit and a daily cap on stock trading. | Advanced users running several books at once |
+| **Standard / Manual** | Separate balances for spot, perps and each market venue, moved by hand. | Market makers, bots and builders with specific needs |
+
+Changing the account type is signed with your own wallet and applied on-chain.
+
+{% hint style="warning" %}
+On **Standard / Manual** you must transfer USDC to the right sub-balance before you can trade there — a market can look untradable simply because the funds are sitting in another compartment.
+{% endhint %}
 
 ## Withdraw
 

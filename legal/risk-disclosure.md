@@ -1,6 +1,6 @@
 # Risk Disclosure Statement
 
-**Last updated:** August 31, 2026
+**Last updated:** September 4, 2026
 
 This Risk Disclosure Statement describes the principal risks of using the Dasus interface ("Dasus") to trade on the underlying decentralized exchange protocol (the "Protocol"). It is part of, and should be read together with, the [Terms of Service](../terms.md). It does not describe every possible risk — markets can produce losses in ways nobody anticipated.
 
@@ -34,6 +34,14 @@ This Risk Disclosure Statement describes the principal risks of using the Dasus 
 
 Some markets available through the interface are deployed **permissionlessly by third parties** on the Protocol's infrastructure. Dasus does not create, review, or approve these markets. They may involve elevated risk: low liquidity, unusual contract specifications, higher fee multipliers, sudden delisting, and incomplete documentation. Assess each market before trading it.
 
+### 5.1 Equity, index, commodity and FX markets
+
+Markets named after stocks, indices, commodities or currencies (for example TSLA, SP500, GOLD or EURUSD) are **perpetual futures margined in USDC**, deployed by third parties as described above. You do **not** own the underlying share, unit or metal, and you receive **no** shareholder rights, dividends, voting rights or physical delivery. Their price is derived from an oracle chosen by the market's deployer; that oracle can be delayed, wrong or unavailable. These instruments trade continuously, including when the reference market is closed, so prices can gap sharply at open, on corporate actions, or on macroeconomic events. Maximum leverage, fees and specifications differ per market and are set by the deployer.
+
+### 5.2 Prediction (outcome) markets
+
+Outcome markets are third-party deployments that settle at a fixed value depending on whether an event occurs. Beyond the risks above, settlement depends on a resolution source or oracle that may be **delayed, disputed or incorrect**, and the resolution criteria may be incomplete or ambiguous. A position can go to zero on resolution. Read each market's details before trading it.
+
 ## 6. Copy trading risk
 
 Copy trading places **real orders in your account**. In addition to all the market risks above:
@@ -59,10 +67,11 @@ Guardian Mode blocks new orders **signed through the Dasus interface** when your
 
 See the [Guardian Mode Terms](guardian-terms.md).
 
-## 9. Vaults, staking and yield risk
+## 9. Vaults, staking, lending and yield risk
 
-- Depositing into vaults means the vault operator's strategy trades with your funds; you can lose deposited capital. Lock-up periods can prevent you from withdrawing during drawdowns.
-- Staking involves protocol-level rules (unbonding periods, slashing where applicable) and price risk on the staked asset.
+- Depositing into vaults means the vault operator's strategy trades with your funds; you can lose deposited capital. Lock-up periods can prevent you from withdrawing during drawdowns, and each new deposit may restart the lock-up on your whole balance.
+- Staking involves protocol-level rules (unbonding periods, slashing where applicable) and price risk on the staked asset. Moving staked assets back to a tradable balance takes days, regardless of market conditions.
+- Supplying assets to lending markets exposes you to borrower default and bad debt, to utilization risk (a fully borrowed pool can delay withdrawals), and to variable rates that can fall at any time. Borrowing against collateral can result in liquidation of that collateral.
 - Advertised yields are variable, not guaranteed, and can turn negative in real terms.
 
 ## 10. Technology and infrastructure risk

@@ -17,6 +17,20 @@ Outcome markets let you trade the probability of an event — "BTC above 100,000
 
 Because these markets are permissionless, they may carry **elevated risk**: low liquidity, high volatility, incomplete documentation, imperfect settlement or resolution criteria, and outcome determination by a resolution source or oracle that may be delayed, disputed or incorrect. Read the market's **Details**, the deployer's documentation (where available) and the [Risk Disclosure](../legal/risk-disclosure.md) before proceeding.
 
+## Fees on outcome markets
+
+Outcome markets are charged differently from the rest of the platform:
+
+- **Opening a position is free** — the protocol fee is charged only when you **close** or get liquidated.
+- The fee scale is set by each market's deployer, and averages roughly **half** a regular market's rate.
+- The Dasus platform fee applies per order as usual, and the order form shows the exact cost before you confirm.
+
+See [Fees](../platform/fees.md) for the full picture.
+
+## Where your positions show up
+
+Open outcome positions appear in the **Outcomes** tab of the terminal's bottom panel and under **Portfolio → Outcomes**, with their fills in your trade history like any other market.
+
 ## Market links
 
 Every market has a readable URL, for example:

@@ -27,12 +27,30 @@ TWAP orders are available in the [Pro terminal](../platform/web-terminal.md):
 2. Choose your side — **Buy/Long** or **Sell/Short**.
 3. Enter the **total size** you want executed.
 4. Set the **duration** — the total time window over which the order should run. The protocol divides your total size into sub-orders executed at intervals across this window.
-5. Review the **Order Details**, including the estimated cost and fees, then confirm.
+5. Optionally set a **trigger price** (the TWAP doesn't start until the mark price reaches it) and a **max/min price** (a ceiling when buying, a floor when selling — if the mark crosses it, the TWAP ends and the remainder is cancelled).
+6. Review the **Order Details**, including the estimated cost and fees, then confirm.
+
+### TWAP rules
+
+These come from the protocol's own TWAP engine, not from Dasus:
+
+| Rule | Value |
+| --- | --- |
+| **Minimum size** | $100 notional per TWAP |
+| **Duration** | 5 minutes to 24 hours |
+| **Sub-order interval** | Dynamic — derived from total size and duration, never more often than every 30 seconds |
+| **Order count** | Shown as an upper bound ("up to N"), because the interval adapts |
+| **Slippage per sub-order** | Up to 3% |
+| **Catch-up sub-orders** | If a slice misses, the next can be up to 3× the normal size |
+
+{% hint style="success" %}
+**TWAP orders pay no Dasus platform fee.** The protocol's TWAP action doesn't carry builder codes, so on a TWAP you only pay the base protocol fee on each slice. See [Fees](../platform/fees.md).
+{% endhint %}
 
 Because trading on Dasus is gasless once [trading is enabled](../guides/enable-trading.md), each sub-order executes automatically — no wallet popups, no per-fill signatures.
 
 {% hint style="warning" %}
-Each executed slice is a fill and incurs trading fees like any other order. See [Fees](../platform/fees.md) for how maker/taker rates and your volume tier apply.
+Each executed slice is a fill and incurs the protocol's trading fee like any other order. See [Fees](../platform/fees.md) for how maker/taker rates and your volume tier apply.
 {% endhint %}
 
 ## Monitoring a running TWAP

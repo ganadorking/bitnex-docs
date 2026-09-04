@@ -10,7 +10,7 @@ Before you can place your first order, make sure you have completed the one-time
 
 ### 1. Pick a market
 
-Use the market selector (or the watchlist/favorites bar in Pro) to choose what you want to trade. Dasus lists dozens of perpetual markets — BTC, ETH, SOL and many more — plus spot markets. Each market shows its live stats: mark price, oracle price, 24h change and volume, open interest, and the current funding rate for perps.
+Use the market selector (or the watchlist/favorites bar in Pro) to choose what you want to trade. Dasus lists hundreds of markets: crypto perpetuals (BTC, ETH, SOL and many more), spot pairs, and perps on stocks, indices, commodities and FX. Each market shows its live stats: mark price, oracle price, 24h change and volume, open interest, and the current funding rate for perps. The [Markets](../platform/markets.md) page is the full catalogue, with sector filters and search.
 
 ### 2. Choose a side
 
@@ -36,9 +36,10 @@ Lite offers **Market** and **Limit** orders, plus attached TP/SL. Pro adds the f
 | **Market** | Executes immediately at the best available price |
 | **Limit** | Executes at your price or better; supports time-in-force options (GTC, IOC, post-only) |
 | **Stop Market / Stop Limit** | Trigger orders that activate when price reaches your stop level |
-| **Take Profit** | Closes a position at a profit target |
+| **Take Market / Take Limit** | Closes a position at a profit target, at market or at your limit price |
 | **Scale** | Splits one order into multiple limit orders across a price range |
 | **TWAP** | Splits the order over time for a time-weighted average price |
+| **Chase** | Keeps a post-only order at the front of the book as the price moves |
 
 Full details, including when to use each type, are on the [Order Types](order-types.md) page, with dedicated pages for [Scale Orders](scale-orders.md) and [TWAP](twap.md).
 

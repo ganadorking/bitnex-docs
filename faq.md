@@ -53,7 +53,14 @@ Once you've enabled trading, order placement is **gasless** — orders are signe
 
 ### What markets can I trade?
 
-Dozens of perpetual futures markets (BTC, ETH, SOL, and many more) plus spot markets. Each market page shows mark price, oracle price, 24h change and volume, open interest, and funding rate. Browse the full list from the market selector or watchlist in the app.
+Hundreds of them, in four families:
+
+- **Crypto perpetuals** — BTC, ETH, SOL and hundreds more, with leverage.
+- **Spot** — buy and hold the token itself. See [Spot Trading](trading/spot.md).
+- **Stocks, indices, commodities and FX** — TSLA, NVDA, SP500, GOLD, EURUSD and many others, traded as perpetual futures margined in USDC (you don't own the underlying share or metal).
+- **Prediction markets** — Yes/No outcome shares. See [Outcomes](trading/outcomes.md).
+
+Each market shows mark price, oracle price, 24h change and volume, open interest and funding rate. Browse everything on the [Markets](platform/markets.md) page, or see the day at a glance on the Heatmap.
 
 ### What order types are supported?
 
@@ -62,10 +69,11 @@ Dozens of perpetual futures markets (BTC, ETH, SOL, and many more) plus spot mar
 | Market | ✅ | ✅ |
 | Limit (GTC / IOC / post-only) | ✅ | ✅ |
 | Stop Market / Stop Limit | — | ✅ |
-| Take Profit orders | — | ✅ |
+| Take Market / Take Limit | — | ✅ |
 | TP/SL (attached to orders and positions) | ✅ | ✅ |
 | [Scale orders](trading/scale-orders.md) | — | ✅ |
 | [TWAP](trading/twap.md) | — | ✅ |
+| Chase (auto-repricing post-only) | — | ✅ |
 
 See [Order Types](trading/order-types.md) for how each one works.
 
@@ -108,7 +116,14 @@ Dasus adds a small platform fee on top of the underlying protocol's base trading
 
 ### Can I reduce my fees?
 
-Yes — fees decrease with trading volume tiers, [staking the protocol's native token](earn/staking.md) may reduce your fees via fee-discount tiers, and users who join through a [referral](platform/referrals.md) can get a fee discount.
+Four ways, and they stack:
+
+- **Trade more.** Both the base protocol fee (14-day volume) and the Dasus platform fee (30-day volume) step down with volume.
+- **Be a maker.** Post Only orders pay 40% of the taker platform fee, and a lower base rate too.
+- **[Stake HYPE](earn/staking.md).** Staking tiers cut the base fee by 5% to 40%.
+- **Referral discount.** The protocol applies a referral discount to accounts registered under a referrer; the Fees page shows whether it is active for you.
+
+**TWAP orders pay no platform fee at all.** Full detail on the [Fees](platform/fees.md) page.
 
 ## Earn
 
@@ -116,11 +131,19 @@ Yes — fees decrease with trading volume tiers, [staking the protocol's native 
 
 On-chain vaults that follow trading strategies run by vault leaders — a copy-trading style product. You deposit, the leader trades, and depositors share the PnL. Performance and history are shown per vault. Vaults carry risk of loss, and withdrawals follow each vault's rules. See [Vaults](earn/vaults.md).
 
+### Can I lend out idle assets?
+
+Yes. The **Earn** page lists the protocol's native lending markets: supply an asset and earn interest paid by borrowers, withdraw when the pool has liquidity. Rates are variable and set by utilization. See [Lend & Borrow](earn/lend-borrow.md).
+
 ### What is Staking?
 
 You can stake the protocol's native token to validators directly from the app. Rewards accrue automatically, and staking may reduce your trading fees through fee-discount tiers. See [Staking](earn/staking.md).
 
 ## Platform & access
+
+### What languages does Dasus support?
+
+The app is available in **English, Spanish, French, Korean and Chinese**. Switch from the settings menu; these docs are in English.
 
 ### Can I use Dasus on my phone?
 
@@ -139,11 +162,15 @@ You can switch between the two at any time — same account, same balances.
 
 ### Where can I see my overall account?
 
-The [Portfolio](platform/portfolio.md) page shows total equity, a PnL-over-time chart, balances by account (perps, spot, vaults, staking), your positions/orders/history, and a full deposits & withdrawals ledger.
+The [Portfolio](platform/portfolio.md) page shows total equity, the equity curve with PnL, volume and max drawdown for the period you pick, balances by account (perps, spot, vaults, outcomes, Earn, staking), your positions/orders/history, and a full deposits & withdrawals ledger. For the day-by-day view and your track record statistics, open the [PnL Calendar](platform/calendar.md).
+
+### Can I research other traders?
+
+Yes, all from public on-chain data: the [Leaderboard](platform/leaderboard.md) ranks the top accounts, [Track](platform/explorer.md#track-any-wallet) turns any address into a readable profile, and the [Explorer](platform/explorer.md) looks up addresses, transactions, blocks and tokens. If a trader is available as a leader, you can follow them with [Copy Trading](platform/copy-trading.md).
 
 ### How do referrals work?
 
-Invite friends with your referral link or code and earn a share of the trading fees they pay; they can get a fee discount for joining through you. Creating a code requires meeting a trading-volume threshold set by the protocol. Rewards are claimable in the app. See [Referrals](platform/referrals.md).
+Create a code instantly — no volume requirement — and share your link. You earn **20% to 60%** of the platform fee generated by the traders who join through you — the rate rises with their combined 30-day volume and never goes back down. Your invitees pay the same fee schedule as everyone else; your share comes out of the Dasus platform fee, not out of their pocket. Rewards are claimable in USDC from the app, and affiliates can pass part of their commission down to their own network, up to 3 levels. See [Referrals](platform/referrals.md).
 
 ### How do I know I'm on the real Dasus?
 
