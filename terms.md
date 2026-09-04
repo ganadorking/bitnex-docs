@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Version:** 1.2.0  ·  **Last updated:** August 31, 2026
+**Version:** 2.0.0  ·  **Last updated:** August 31, 2026
 
 These Terms of Service ("Terms") govern your access to and use of the Dasus interface at dasus.xyz (the "Interface", "Dasus", "we", "us", or "our"). The Interface is a non-custodial front-end that lets you access decentralized trading on a third-party decentralized exchange protocol (the "Protocol"). By connecting a wallet and using the Interface, you agree to these Terms.
 
