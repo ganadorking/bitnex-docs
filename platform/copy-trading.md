@@ -54,6 +54,40 @@ In Inverse mode, when the trader opens a long you open a **short** (and vice ver
 
 A copied position is opened **once**. If **you** close it yourself (from your Portfolio, the terminal, or "Close All"), the engine treats that as your final decision for that market: **it will never reopen it** inside that subscription — not even if the trader adds to it, flips it, or you re-run "copy already-open positions". "Last activity" shows the market as *closed by you*. To copy that market again, stop the subscription and create a new one.
 
+## What happens when… (scenario map)
+
+**The trader you copy…**
+
+| Event | Your copy |
+|---|---|
+| Opens a new position | Opens proportionally, within your limits. |
+| Adds to a position | Adds to your copied size. The "worst entry" check compares against the price of *that* add, not the trader's average entry. |
+| Reduces part | Reduces your copied size proportionally, never more than what the copy opened. |
+| Closes everything | Closes **only what this copy opened** — never a position you opened yourself, nor another copy's. |
+| Flips (long → short) | Closes your copied size and opens the new side, unless you had closed that market by hand. |
+| Sets or moves a TP/SL | It is mirrored on your copied size (one TP and one SL at most). In Inverse mode they swap. |
+
+**You…**
+
+| Action | What happens |
+|---|---|
+| Close a copied position by hand | That market is **locked for that copy**: it will not be reopened by later signals. Your close is final. |
+| Reduce part of a copied position by hand | The copied size is scaled down to match; nothing is locked. |
+| Hold your own position in the same market | It coexists. The engine only ever touches the size it opened; your own size is never closed and never counts toward the copy's stop. |
+| Copy trader A (long BTC) and trader B (short BTC) | Hyperliquid nets both into one BTC position in your account, possibly near zero. The engine tracks each copy separately and closes each one when its trader does. The setup wizard warns you before you allocate capital to opposite sides. |
+| Run out of free margin | Hyperliquid rejects the order; the reason shows on your copy card and the next signal is tried again. |
+
+## Pausing and stopping
+
+Both open a dialog that lists every position **this copy opened**, with its size, entry, current price and PnL. For each one you choose:
+
+- **Close** — a market order for the size the copy opened. The engine executes it within seconds, with the agent key it already holds, even though the copy is already paused or stopped.
+- **Keep** — the position stays in your account and is yours to manage from Portfolio.
+
+While a copy is **paused**, nothing is opened *or closed* for it, and its loss protection is not evaluated. Resuming follows the trader from that moment on; what they did during the pause is not replayed. If a copy was paused by its loss protection, resuming resets the protection counter.
+
+**Stopping** removes the copy from your list immediately. Any TP/SL the engine mirrored for it is cancelled first, then your requested closes are executed, and only then is the copy (and its encrypted key) deleted.
+
 ## Exchange minimum and skipped positions
 
 Hyperliquid requires roughly **$10 of value per order**. Your copies are scaled by *your allocation ÷ the trader's equity*, so with a small allocation against a large trader, their smaller positions can scale below that minimum — those are **skipped** (never opened) and listed one by one in "Last activity" with the reason. Raising the allocation is the only way to include them.
