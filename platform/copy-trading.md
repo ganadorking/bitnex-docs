@@ -38,7 +38,7 @@ Dimensions without data are excluded and the weights re-normalised; profitabilit
 
 - **Risk disclosure** — a gas-free signature of the full text, once per wallet and version. It records your acceptance; it authorizes nothing on-chain.
 - **Copy agent key** — authorizes a named key ("bitnex-copy") to place and cancel orders for you. By protocol design it cannot withdraw or approve fees.
-- **Platform fee** — the only signature that lets Hyperliquid deduct Dasus's fee from your orders. It is per builder address, capped (max 1%), and asked once the first time you copy. Without it Hyperliquid rejects any order carrying the fee; if that ever happens, the engine retries the copy without the fee rather than losing it.
+- **Platform fee** — the only signature that lets Hyperliquid deduct Dasus's fee from your orders. It is per builder address, capped (max 1%), and asked once the first time you copy. Without it Hyperliquid rejects any order carrying the fee; if that ever happens, the engine retries the copy without the fee rather than losing it. You can withdraw this approval at any time from **Agent wallets → Builder fee → Revoke** (it sets the cap to 0%; your orders then carry no Dasus fee and the cashback/referral rewards that depend on it stop).
 
 ## Do I need to keep my wallet connected?
 
