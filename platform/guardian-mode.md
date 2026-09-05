@@ -61,6 +61,8 @@ Guardian is a deterministic engine: the same policy, account state and order alw
 | **Paused** | Your voluntary pause is running | Close or reduce; wait |
 | **Allowed** | All rules pass | Sign |
 
+If the same rule stops you again within a minute, Guardian shows a brief notice instead of the full message — the decision is the same, the interruption is smaller.
+
 There is no "continue anyway" for any of these. When an order is stopped, the message tells you which rule, the limit and your actual value, when it lifts on its own (if it does), and a **safe alternative that would comply** — the maximum size, the maximum leverage, or "attach a stop". Guardian never suggests buying or selling.
 
 ## Your risk right now
@@ -72,6 +74,20 @@ The Guardian page shows a live risk dashboard computed from your account on Hype
 - **Reserve left today**: your daily-loss budget minus what you already lost today, minus open and pending risk. If the sum is already over the budget, it says so.
 - **Gross exposure** and effective leverage, **margin in use**, **nearest liquidation**, **concentration** in your largest position, and how many positions carry a stop.
 - The **age and quality of the data** behind those numbers (live / delayed / stale / none) and Guardian's confidence in them.
+- **Stress**: if every position moved 5%, 10% or 20% against you at once — the loss with your stops on the book, and the loss in a gap where nothing executes (capped at your margin). It is arithmetic on your positions, not a forecast.
+
+## Your process and your day
+
+Under the risk dashboard, Guardian scores your **process** — never your results. Four components, each with the size of its sample next to it:
+
+- **Protection**: how many of your open positions have a stop right now.
+- **Adherence**: orders that complied, against orders plus attempts Guardian had to stop, over 30 days.
+- **Size consistency**: how steady your opening size is (a robust spread around your median).
+- **Control**: attempts to trade while a session limit or cooldown was running. Each one costs points.
+
+The score says its own confidence: with few openings it is *low* and says so. It does not look at PnL, volume or days traded, so it can't be gamed by trading more.
+
+**Today** shows the day in five numbers — openings, closes, closed PnL, orders Guardian stopped and shadow would-blocks — with an optional **note for today**. The note is private: it lives in this browser and is never sent to our server.
 
 ## Risk before trade
 
@@ -81,6 +97,14 @@ In the Pro order form, as soon as you type a size on a perp, a small panel shows
 
 Turn on **shadow mode** to let Guardian evaluate and record what it would have done without stopping any order — useful while calibrating new rules. Each would-be decision shows in your record marked "shadow". Your voluntary pause is never shadowed, and copy trading is not paused by shadowed rules. Switching shadow on counts as loosening (it waits for your unlock delay); switching it off applies immediately.
 
+## Kill switch, evidence and deletion
+
+Three buttons at the bottom of your rules, only while Guardian is on:
+
+- **Kill switch**: cancels every resting order that would add exposure and starts a **24-hour voluntary pause**. It asks for confirmation once; after that it is as irrevocable as any pause. Closing stays available, and copy trading stops opening new copies.
+- **Export evidence**: downloads a JSON with your current policy, its version history and your decision record — a *policy passport* you can keep or show to anyone who asks how you trade. Only available when the policy is saved on our server.
+- **Delete my record**: removes your decision record, here and on our server. Your policy and its history are kept, because the delay that protects you depends on them.
+
 ## The unlock delay
 
 Tightening a rule applies **immediately**. Loosening one — raising a limit, removing a required stop, lowering the minimum distance to liquidation, or turning Guardian off — waits for the delay you chose, and the page shows the countdown. You can cancel a queued loosening at any time (going back to the stricter rule is always instant). Shortening the delay itself counts as loosening. This is the point: the moment you most want to relax a rule is the moment it protects you.
@@ -88,14 +112,14 @@ Tightening a rule applies **immediately**. Loosening one — raising a limit, re
 ## What Guardian covers
 
 - Every order that opens or adds exposure from Dasus: the order form (market, limit, stop, scale, TWAP, chase), chart trading, editing open orders, Lite mode, swaps, staking swaps, prediction markets and bots.
-- **Copy trading openings** on our servers: an active pause, Guardian turned off in queue, your max leverage and "stop-loss required" stop new copies from opening (copies carry no stop, so that rule pauses them — the copy's event log tells you). Daily loss and drawdown are **not** applied to copies; each copy has its own drawdown protection.
+- **Copy trading openings** on our servers: an active pause, Guardian turned off in queue, your max leverage and "stop-loss required" stop new copies from opening (copies carry no stop, so that rule pauses them — the copy's event log tells you). Your **daily loss** and **max drawdown** stop new copies too, measured from your Hyperliquid account about once a minute; if that reading fails, copies wait rather than open. Your **minimum reserve of the day** applies as well, counting the copies opened in the same cycle (not the open risk of positions you already had). Each copy keeps its own drawdown protection.
 - Closing, cancelling, reducing, withdrawing and revoking: always allowed, never evaluated.
 
 ## What Guardian does not see
 
 - Orders placed outside Dasus: the Hyperliquid app, other front-ends, bots you run yourself, APIs. Guardian can't evaluate what it can't see, and we don't claim otherwise.
-- Market conditions: it doesn't check spread, depth or slippage yet.
+- Depth and market impact: it checks the spread and the estimated slippage of a market order from the live book in the Pro form, but not the depth your order would consume.
 
 ## Your record
 
-Every decision that stops an order is kept with its outcome, reason codes and the version of the policy that decided it, on the Guardian page and on our server. It is your record — nobody else's.
+Every decision that stops an order is kept with its outcome, reason codes and the version of the policy that decided it, on the Guardian page and on our server. It is your record — nobody else's: you can export it and you can delete it.

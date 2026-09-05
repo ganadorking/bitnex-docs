@@ -62,6 +62,12 @@ Copies are **proportional**: if the trader risks 10% of their equity on a trade,
 | **Assets** | Copy every market the trader touches, or only the ones you select. |
 | **Copy already-open positions** | On start, opens the trader's current positions proportionally **at the current price**. |
 
+### Your Guardian rules apply to copies
+
+If you use [Guardian Mode](guardian-mode.md), the copy engine reads the same policy you saved on our server. An active pause, Guardian turned off while the delay runs, your max leverage, "stop-loss required" (copies carry no stop), your daily loss, your max drawdown and your minimum reserve of the day all stop **new copies from opening** — never a close. For the loss rules the engine reads your account on Hyperliquid about once a minute; if it cannot read it, copies wait rather than open. The reserve counts the copies opened in the same cycle, not the open risk of positions you already had.
+
+Traders in the marketplace who run Guardian show a **Guardian** badge, with how long the policy has been observed and its version. It says something about discipline, nothing about returns.
+
 ## Inverse mode
 
 In Inverse mode, when the trader opens a long you open a **short** (and vice versa). Closes always act on **your** real position, and the trader's TP/SL are inverted with the matching logic: their take profit becomes your stop loss and vice versa (same price barrier, opposite position). The same risk limits apply.
