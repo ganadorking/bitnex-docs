@@ -33,7 +33,21 @@ Your policy is **per wallet** (each account, sub-account or vault you trade from
 | **Max notional per order** | Blocks a single order above this size | The order you're placing |
 | **Min. distance to liquidation** | Blocks an order whose estimated liquidation price is closer than this | The liquidation price the form estimates (or 90% of 1 ÷ leverage when unavailable) |
 
-A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade) or of the day's / anchor's equity (losses).
+| **Max open risk** | Blocks an order if, after it, the loss to all your stops (margin where there is no stop) would exceed this share of equity | Your open positions and their stops |
+| **Max pending risk** | Same for resting orders that would add exposure | Your open orders |
+| **Min. reserve of the day** | No order may consume more of today's loss budget than leaves this share free | Budget − lost today − open risk − pending risk |
+| **Max gross exposure** | Blocks an order that would push the sum of all positions above this multiple of equity | Positions after the order |
+| **Max per asset** | Blocks an order that would put more than this share of equity in one asset | Positions after the order |
+| **Max margin in use** | Blocks an order that would push margin in use above this share of equity | Margin after the order |
+| **Max stop distance** | Blocks a stop further from entry than this — also when you drag a stop away on the chart | The attached or dragged stop |
+| **Max slippage / max spread** | Blocks a market order whose estimated slippage, or a book whose spread, exceeds the limit (Pro form, live book) | The order book at that moment |
+| **Max price deviation** | Fat-finger guard: a limit price this far from mark is blocked | The mark price |
+| **Max openings per day** | Blocks new openings after this many in the UTC day | Your fills |
+| **Min. re-entry time** | Waits this many minutes after closing before you can reopen the same asset | Your fills |
+| **Max size after a loss** | During the cooldown after a losing trade, an order larger than this multiple of that trade waits | Your fills (24 h window) |
+| **Recovery mode** | After a daily-loss stop, per-order limits are halved for this many hours past the reset | The day's reset |
+
+A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
 
 ### How the decision is made
 
