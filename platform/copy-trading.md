@@ -16,6 +16,24 @@ Copy top traders automatically from Dasus: the engine mirrors their trades into 
 4. **The engine copies 24/7** — it mirrors the trader's **new** position changes (opens, increases, reductions, closes **and their TP/SL**), proportional to your allocation. Every copied order is tagged with a "Copy" chip in your tables.
 5. **Pause, adjust or stop whenever you want.** Stopping a copy **does not close your open positions** — they stay in your account and you manage them from your Portfolio.
 
+## How the ranking and the risk labels work
+
+The marketplace orders traders by **Copy Score**, a 1–99 rating computed only from public on-chain data of that wallet over the last 30 days. It blends five dimensions, each scaled 0–100:
+
+| Dimension | Source | Weight |
+|---|---|---|
+| Profitability | 30-day ROI (0% → 50, +100% → 100, −100% → 0) | 35% |
+| Consistency | 30-day Sharpe ratio | 20% |
+| Risk | maximum drawdown in the period (0% → 100, 100% → 0) | 20% |
+| Hit rate | share of closed trades in profit | 15% |
+| Activity | days with trades in the last 30 (20+ → 100) | 10% |
+
+Dimensions without data are excluded and the weights re-normalised; profitability is mandatory — if a wallet's ROI cannot be measured reliably it gets **no score** and sorts last. Every card shows the period (30 days) and the figures refresh continuously from Hyperliquid.
+
+**Risk labels** come from the 30-day maximum drawdown: *Low* below 10%, *Medium* below 30%, *High* above. They describe the past month, not the future.
+
+**Read the numbers with care.** A 30-day ROI is computed on the starting capital: deposits and withdrawals during the month distort it, so always look at the dollar PnL and the equity next to it. A short history (few trading days) is a streak, not a strategy. The ranking includes only wallets that are currently active on Hyperliquid, so it carries survivorship bias by construction. None of this is a recommendation; the risk disclosure you sign before copying applies to every trader listed.
+
 ## What you sign, and why
 
 - **Risk disclosure** — a gas-free signature of the full text, once per wallet and version. It records your acceptance; it authorizes nothing on-chain.
