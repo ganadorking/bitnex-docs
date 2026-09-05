@@ -7,79 +7,63 @@
 Guardian Mode lets you set your own risk limits, and Dasus enforces them **before you sign an order**. You decide the rules once, when you're calm; they apply every time, including the times you'd rather they didn't.
 
 {% hint style="warning" %}
-**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order breaking your rules is placed from Dasus**. We will never tell you it makes losses impossible.
+**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order that breaks your rules is signed from Dasus**, and that **your copy trading does not open new copies against them**. It never promises "you can't lose more than X".
 {% endhint %}
 
-**Guardian never blocks you from closing a position or setting a stop.** Only orders that open or increase exposure are evaluated. A limit that traps you in a trade would be worse than no limit at all.
+**Guardian never blocks you from closing a position, cancelling an order, adding a stop, withdrawing or revoking a key.** Only orders that open or increase exposure are evaluated. A limit that traps you in a trade would be worse than no limit at all.
 
 ## Turning it on
 
-Guardian Mode has its own page at **/guardian**. Activation is a short wizard — nothing turns on until the last step:
+Guardian has its own page at **/guardian**. Activation is four sliders and one checkbox: max leverage, daily loss, max drawdown and your **unlock delay**. Every slider starts at its strictest value; loosening is a decision you make, not a default. Nothing turns on until you accept the terms.
 
-1. **Pick a risk profile** — Conservative, Balanced, or Aggressive. The profile fills in every limit; you can fine-tune them next.
-2. **Adjust the key limits** — max leverage, risk per trade, daily loss, losing streak.
-3. **Choose your unlock delay** — written **in days**, from 1 to 365. This is how long any future loosening will wait.
-4. **Review the summary, accept the terms, and sign with your wallet.** The signature records the limits you chose; without it, nothing activates.
+At that moment Guardian anchors your **starting capital** — the account value at activation — and measures your drawdown against it, like a funding-firm account. You can re-anchor at any time from the page (a conscious action, never automatic).
 
-At that moment Guardian freezes your **starting capital** — the account value at activation — and measures your maximum drawdown against it, like a funding-firm account. The chart on the page draws your equity from that starting point against the exact lines where Guardian will block new orders, and the **Capital targets** section translates each percentage into dollars: the threshold where the block triggers and how much room you have left.
+Your policy is **per wallet** (each account, sub-account or vault you trade from has its own) and it is **saved on our server with a version number and a full history**. Clearing your browser or switching devices does not remove it, and an active pause survives. If you are not signed in, the local copy applies until you sign in again; the page tells you which one is in force.
 
-Configuration is **per wallet**: each account you connect has its own Guardian, its own limits, and its own signature.
+## The rules
 
-After activation, the page shows your parameters as a plain list — rule and value, exactly as configured. Tap any number to change it (a value of 0 disables that rule). Tightening applies instantly; loosening waits for your unlock delay.
-
-## The limits
-
-| Limit | What it does | Measured from |
+| Rule | What it does | Measured from |
 | --- | --- | --- |
-| **Max leverage** | Blocks any order above this leverage | The order you're placing |
-| **Max risk per trade** | Blocks the order if hitting your stop would cost more than this share of your account | Distance between entry and your stop, times leverage |
-| **Daily loss** | Once you're down this much today, no new positions | Your equity curve since local midnight |
-| **Weekly loss** | Same, over the week starting Monday | Your equity curve since Monday |
-| **Max drawdown** | Blocks while your account sits this far below your starting capital | The capital frozen at activation (or your peak, for configs created before this existed) |
-| **Trades per day** | Caps how many positions you open in a day. Closes never count | Your fills since local midnight |
-| **Pause after a loss** | Forced wait after any losing close | Timestamp of your last losing fill |
-| **Losing streak** | Stops you after N losses in a row | Consecutive losing closes, most recent first |
-| **Extreme volatility** | Blocks markets that moved more than this in 24h | The market's 24h change |
+| **Max leverage** | Blocks any new order above this leverage | The order you're placing |
+| **Daily loss** | Once you're down this much today, only closing until the next reset | Your PnL since **00:00 UTC**, net of deposits and withdrawals |
+| **Max drawdown** | Only closing while your account sits this far below your anchor | PnL since the anchor, net of deposits and withdrawals |
+| **Voluntary pause** | No new exposure until it ends. **Irrevocable** once set | The date you chose |
+| **Max risk per trade** | Blocks an order whose loss to its stop would exceed this share of your equity | Distance between entry and the **attached** stop × size, plus 0.1% for fees and slippage. Without a stop, the whole margin (notional ÷ leverage) counts as risk |
+| **Stop-loss required** | Blocks perp openings without an attached stop on the correct side | The stop attached to the order — not one you plan to add later |
+| **Max notional per order** | Blocks a single order above this size | The order you're placing |
+| **Min. distance to liquidation** | Blocks an order whose estimated liquidation price is closer than this | The liquidation price the form estimates (or 90% of 1 ÷ leverage when unavailable) |
 
-### Notes on how these are measured
+A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade) or of the day's / anchor's equity (losses).
 
-**Everything comes from your real on-chain account**, not from a counter stored in your browser. If it lived in local storage, clearing it would defeat the limit on exactly the day it matters most.
+### How the decision is made
 
-**Max risk per trade needs a stop.** Without one, the risk of a trade isn't a number anyone can compute. If you set a per-trade risk limit and place an order with no stop attached, Guardian shows a warning — you can continue, but it tells you that the limit can't protect you here.
+Guardian is a deterministic engine: the same policy, account state and order always produce the same decision, with the same reason codes. Each decision has one of these outcomes, in order of precedence:
 
-**The losing streak resets each day.** It blocks only while your most recent loss is from today. Otherwise the block would be permanent: a streak only ends with a win, and you can't win if you can't trade. The rule means "stop for today and review", not "you're out for good".
+| Outcome | Meaning | What you can do |
+| --- | --- | --- |
+| **State unavailable** | Your account data hasn't loaded or is older than 5 minutes, so Guardian won't judge a loss limit with stale numbers | Close or reduce; reload and retry |
+| **Blocked** | A hard rule is broken (leverage, notional, stop, liquidation distance, risk per trade) | Follow the calculated alternative |
+| **Closing only** | Daily loss or drawdown reached | Close or reduce until the reset (00:00 UTC) or until you re-anchor |
+| **Paused** | Your voluntary pause is running | Close or reduce; wait |
+| **Allowed** | All rules pass | Sign |
+
+There is no "continue anyway" for any of these. When an order is stopped, the message tells you which rule, the limit and your actual value, when it lifts on its own (if it does), and a **safe alternative that would comply** — the maximum size, the maximum leverage, or "attach a stop". Guardian never suggests buying or selling.
 
 ## The unlock delay
 
-This is the part that makes Guardian actually work.
-
-- **Tightening a limit is immediate.** Lowering a cap or turning a rule back on applies the moment you save it.
-- **Loosening a limit waits.** Raising a cap, removing a rule, or switching Guardian off does not take effect until your unlock delay has passed — the delay you wrote in days (1–365) when you activated, adjustable like any other rule.
-
-Without this, the first time a limit gets in your way — down on the day, wanting to make it back — you'd switch it off in two clicks and the feature would be decoration.
-
-While a change is waiting you'll see a banner with the countdown and a **Keep the strict limit** button, which cancels the pending change instantly. Going back to the stricter rule never waits.
-
-Queueing a second loosening change restarts the clock, so the delay can't be walked around in small steps.
-
-## When an order is blocked
-
-You get a modal that names the rule, your limit, and the current value — for example *"Max leverage: your limit 10×, right now 25×"*. There is no "ignore and continue" button on a block. To change the limit you go to the Guardian page, and that change goes through your unlock delay.
-
-Warnings are different: nothing is broken, but something is worth a second look. Those you can continue past with one deliberate click.
+Tightening a rule applies **immediately**. Loosening one — raising a limit, removing a required stop, lowering the minimum distance to liquidation, or turning Guardian off — waits for the delay you chose, and the page shows the countdown. You can cancel a queued loosening at any time (going back to the stricter rule is always instant). Shortening the delay itself counts as loosening. This is the point: the moment you most want to relax a rule is the moment it protects you.
 
 ## What Guardian covers
 
-Guardian checks every order that is signed in your browser before it is sent: the order form (market, limit, stop, scale, TWAP and chase), chart trading and dragged orders, TP/SL, edits to open orders, grid bots, Swap, the staking swap, prediction markets, Lite mode, and sub-accounts or vaults you trade from Dasus. Closing orders (reduce-only) always go through — Guardian never traps you in a position. The Guardian page shows this list so there is no doubt about what is and isn't under your rules.
+- Every order that opens or adds exposure from Dasus: the order form (market, limit, stop, scale, TWAP, chase), chart trading, editing open orders, Lite mode, swaps, staking swaps, prediction markets and bots.
+- **Copy trading openings** on our servers: an active pause, Guardian turned off in queue, your max leverage and "stop-loss required" stop new copies from opening (copies carry no stop, so that rule pauses them — the copy's event log tells you). Daily loss and drawdown are **not** applied to copies; each copy has its own drawdown protection.
+- Closing, cancelling, reducing, withdrawing and revoking: always allowed, never evaluated.
 
-## What Guardian does not do
+## What Guardian does not see
 
+- Orders placed outside Dasus: the Hyperliquid app, other front-ends, bots you run yourself, APIs. Guardian can't evaluate what it can't see, and we don't claim otherwise.
+- Market conditions: it doesn't check spread, depth or slippage yet.
 
-- It does not stop you trading the same account from another client (the Hyperliquid app, other frontends, the API).
-- It does not apply to copy trading: the copy engine runs on Dasus servers with its own key, outside your browser.
-- It does not move, hold, or restrict your funds in any way.
-- It does not close positions for you, add stops for you, or act on your account.
+## Your record
 
-## Interaction with bots
-
-Grid and DCA bots go through the same barrier. If you've hit your daily loss limit, your bots stop placing new orders too — which is the point. Cancelling existing bot orders always works.
+Every decision that stops an order is kept with its outcome, reason codes and the version of the policy that decided it, on the Guardian page and on our server. It is your record — nobody else's.
