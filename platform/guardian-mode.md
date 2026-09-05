@@ -49,6 +49,24 @@ Guardian is a deterministic engine: the same policy, account state and order alw
 
 There is no "continue anyway" for any of these. When an order is stopped, the message tells you which rule, the limit and your actual value, when it lifts on its own (if it does), and a **safe alternative that would comply** — the maximum size, the maximum leverage, or "attach a stop". Guardian never suggests buying or selling.
 
+## Your risk right now
+
+The Guardian page shows a live risk dashboard computed from your account on Hyperliquid — nothing you type, nothing estimated by hand:
+
+- **Open risk**: the loss you would take if every stop you have on the book got hit; for positions without a stop, the margin at risk (what you lose by liquidation).
+- **Pending risk**: resting orders that would add exposure, at the leverage of that market.
+- **Reserve left today**: your daily-loss budget minus what you already lost today, minus open and pending risk. If the sum is already over the budget, it says so.
+- **Gross exposure** and effective leverage, **margin in use**, **nearest liquidation**, **concentration** in your largest position, and how many positions carry a stop.
+- The **age and quality of the data** behind those numbers (live / delayed / stale / none) and Guardian's confidence in them.
+
+## Risk before trade
+
+In the Pro order form, as soon as you type a size on a perp, a small panel shows what that order does: its risk in dollars and as a share of your equity, the effective leverage and margin in use **after** the order, the distance to liquidation, today's reserve after it — and Guardian's decision, computed by the same engine that will decide when you press the button, with the reason and the alternative that would comply. If Guardian is off, you still get the numbers.
+
+## Shadow mode
+
+Turn on **shadow mode** to let Guardian evaluate and record what it would have done without stopping any order — useful while calibrating new rules. Each would-be decision shows in your record marked "shadow". Your voluntary pause is never shadowed, and copy trading is not paused by shadowed rules. Switching shadow on counts as loosening (it waits for your unlock delay); switching it off applies immediately.
+
 ## The unlock delay
 
 Tightening a rule applies **immediately**. Loosening one — raising a limit, removing a required stop, lowering the minimum distance to liquidation, or turning Guardian off — waits for the delay you chose, and the page shows the countdown. You can cancel a queued loosening at any time (going back to the stricter rule is always instant). Shortening the delay itself counts as loosening. This is the point: the moment you most want to relax a rule is the moment it protects you.
