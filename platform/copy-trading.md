@@ -30,7 +30,7 @@ The marketplace orders traders by **Copy Score**, a 1–99 rating computed only 
 
 Dimensions without data are excluded and the weights re-normalised; profitability is mandatory — if a wallet's ROI cannot be measured reliably it gets **no score** and sorts last. Every card shows the period (30 days) and the figures refresh continuously from Hyperliquid.
 
-**Risk labels** come from the 30-day maximum drawdown: *Low* below 10%, *Medium* below 30%, *High* above. They describe the past month, not the future.
+**Risk labels** come from the 30-day maximum drawdown: *Low* below 10%, *Medium* below 30%, *High* above. They describe the past month, not the future. The drawdown is measured on the chained return of each interval between samples (deposits and withdrawals are not counted as gains or losses), so it is always between 0% and 100% — a 100% means the wallet lost, at some point, all the capital it had at that moment, even if it was funded again afterwards.
 
 **Read the numbers with care.** A 30-day ROI is computed on the starting capital: deposits and withdrawals during the month distort it, so always look at the dollar PnL and the equity next to it. A short history (few trading days) is a streak, not a strategy. The ranking includes only wallets that are currently active on Hyperliquid, so it carries survivorship bias by construction. None of this is a recommendation; the risk disclosure you sign before copying applies to every trader listed.
 
