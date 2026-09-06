@@ -112,7 +112,7 @@ A copied position is opened **once**. If **you** close it yourself (from your Po
 
 ## My copies
 
-Each copy shows the trader's name (or address), when you started copying, whether it is active or paused, and four numbers: your allocation, the copy's PnL, copied volume and copied orders. Your settings (max leverage, max worse entry, protection) sit in one line below, and the positions this copy opened appear as chips with their side. The **Pause** and **Stop** buttons are labelled; both ask what to do with open positions before acting.
+Each copy shows the trader's name (or address), when you started copying, whether it is active or paused, and four numbers: your allocation, the copy's PnL, copied volume and copied orders. Your settings (max leverage, max worse entry, protection) sit in one line below, and the positions this copy opened appear as chips with their side. Once the engine has copied at least one order for that trader, the same line shows **how far your fills landed from the trader's price**, in basis points (a positive number means you entered worse) and how many fills that average covers. It is telemetry, not a limit: the "max worse entry" setting is what actually stops a copy from filling too far away. The **Pause** and **Stop** buttons are labelled; both ask what to do with open positions before acting.
 
 ## Pausing and stopping
 
