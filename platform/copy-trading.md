@@ -46,6 +46,9 @@ Dimensions without data are excluded and the weights re-normalised; profitabilit
 
 ## How your copies are sized
 
+The amount you put in is capped at your **available** balance on Hyperliquid (free margin, or free USDC in a unified account): you cannot type more than you have, and the 25% / 50% / 75% / Max shortcuts are shares of that available balance. The line under the slider shows the minimum this copy needs and what you have available.
+
+
 Copies are **proportional**: if the trader risks 10% of their equity on a trade, your copy risks 10% of your allocation. Example: a trader with $500,000 of equity opens a $50,000 position (10%) → with a $100 allocation, your copy opens about $10.
 
 * **Per-order minimum:** the protocol requires roughly $10 of notional per order. If your allocation is very small relative to the trader's equity, some copies won't reach the minimum and will be skipped (you'll see it under "Last activity").
@@ -106,6 +109,10 @@ A copied position is opened **once**. If **you** close it yourself (from your Po
 | Hold your own position in the same market | It coexists. The engine only ever touches the size it opened; your own size is never closed and never counts toward the copy's stop. |
 | Copy trader A (long BTC) and trader B (short BTC) | Hyperliquid nets both into one BTC position in your account, possibly near zero. The engine tracks each copy separately and closes each one when its trader does. The setup wizard warns you before you allocate capital to opposite sides. |
 | Run out of free margin | Hyperliquid rejects the order; the reason shows on your copy card and the next signal is tried again. |
+
+## My copies
+
+Each copy shows the trader's name (or address), when you started copying, whether it is active or paused, and four numbers: your allocation, the copy's PnL, copied volume and copied orders. Your settings (max leverage, max worse entry, protection) sit in one line below, and the positions this copy opened appear as chips with their side. The **Pause** and **Stop** buttons are labelled; both ask what to do with open positions before acting.
 
 ## Pausing and stopping
 
