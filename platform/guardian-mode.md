@@ -47,7 +47,7 @@ Your policy is **per wallet** (each account, sub-account or vault you trade from
 | **Max size after a loss** | During the cooldown after a losing trade, an order larger than this multiple of that trade waits | Your fills (24 h window) |
 | **Recovery mode** | After a daily-loss stop, per-order limits are halved for this many hours past the reset | The day's reset |
 
-A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
+**Every rule is set from its own card**: tap the card (or the "Set a limit" tag on a rule that has none) to open its editor — a slider, the exact number, and a line telling you whether the change applies now (tightening) or after your unlock delay (loosening). A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
 
 ### How the decision is made
 
