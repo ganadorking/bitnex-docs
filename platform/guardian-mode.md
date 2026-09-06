@@ -47,7 +47,19 @@ Your policy is **per wallet** (each account, sub-account or vault you trade from
 | **Max openings per day** | Blocks new openings after this many in the UTC day | Your fills |
 | **Min. re-entry time** | Waits this many minutes after closing before you can reopen the same asset | Your fills |
 | **Max size after a loss** | During the cooldown after a losing trade, an order larger than this multiple of that trade waits | Your fills (24 h window) |
-| **Recovery mode** | After a daily-loss stop, per-order limits are halved for this many hours past the reset | The day's reset |
+| **Recovery mode** | After a daily-loss stop, per-order limits are halved for the first half of this many hours past the reset, then reduced by a quarter for the second half | The day's reset |
+| **First trade of the day** | The first opening of the UTC day can risk at most this share of your equity | Your fills |
+| **Stop moves away per day** | Moving a stop further from entry more than this many times a day on the same asset is blocked; every move away shows a notice | Counted in this browser |
+| **Max net exposure** | Blocks an order that would push your longs minus your shorts above this multiple of equity | Positions after the order |
+| **Max per cluster** | Blocks an order that would put more than this share of equity in assets that move together (majors, L1s, memes, AI, equities, FX, commodities) | A versioned cluster table; anything else is its own cluster |
+| **Max market impact** | Blocks a market order whose fill through the live book would move the price more than this | The order book (Pro form) |
+| **Max attempts per hour** | Waits when you have tried to open more than this many orders in a rolling hour | Attempts evaluated in this browser |
+| **Trading window (UTC)** | Openings outside your window wait until it opens; a window like 22 to 6 spans midnight | The clock, in UTC |
+| **Cooldown escalation** | Each repeated cooldown in the same day lasts this many times longer, up to 24 h | Your record of the day |
+| **Loss streak** | After this many losing closes in a row today, a cooldown starts | Your fills |
+| **Martingale steps** | After this many times of opening bigger right after a loss, a cooldown starts | Your fills |
+
+Two protections are always on and are not rules you set: if the mark price and the order book disagree by more than 2%, or Hyperliquid stops answering, Guardian treats the state as unavailable and does not open new exposure until data is back. Closing is never affected.
 
 The page lists only the rules you have switched on, as plain rows, with the cushion left for daily loss and drawdown. A rule that is off is not shown; switch it on from **Edit rules**. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
 
@@ -114,6 +126,7 @@ Tightening a rule applies **immediately**. Loosening one — raising a limit, re
 ## What Guardian covers
 
 - Every order that opens or adds exposure from Dasus: the order form (market, limit, stop, scale, TWAP, chase), chart trading, editing open orders, Lite mode, swaps, staking swaps, prediction markets and bots.
+- **Copy engine heartbeat**: the engine that runs your copies reports every few seconds. If it goes quiet for more than two minutes, "My copies" says so in red, so you never see "copying" while nothing is being managed.
 - **Copy trading openings** on our servers: an active pause, Guardian turned off in queue, your max leverage and "stop-loss required" stop new copies from opening (copies carry no stop, so that rule pauses them — the copy's event log tells you). Your **daily loss** and **max drawdown** stop new copies too, measured from your Hyperliquid account about once a minute; if that reading fails, copies wait rather than open. Your **minimum reserve of the day** applies as well, counting the copies opened in the same cycle (not the open risk of positions you already had). Each copy keeps its own drawdown protection.
 - Closing, cancelling, reducing, withdrawing and revoking: always allowed, never evaluated.
 
