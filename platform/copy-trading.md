@@ -184,3 +184,5 @@ Check "Last activity" on your copy. The usual reasons are: entry deviation excee
 
 **What does the /100 score measure?**
 It's a transparent heuristic over real data: 30-day returns (35%), consistency/Sharpe (20%), drawdown risk (20%), win rate (15%) and activity (10%). It is not an investment recommendation.
+
+**Earn and protocol movements.** A trader's profile also shows their **Earn** tab (vault deposits such as HLP, and HYPE staking with each validator and lock), counts vault equity in the account value, names every protocol movement in *Transfers* (vault deposits and withdrawals, staking, delegation, genesis, rewards, liquidations, sub-account and perps↔spot moves) with a 365-day deposits/withdrawals summary, and summarises open prediction (outcome) positions.
