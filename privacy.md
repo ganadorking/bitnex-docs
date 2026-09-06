@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** August 31, 2026
+**Last updated:** September 6, 2026
 
 This Privacy Policy explains how the Dasus interface ("Dasus", "we", "us", or "our") handles information when you use dasus.xyz to access decentralized trading on a third-party decentralized exchange protocol (the "Protocol").
 
@@ -73,6 +73,7 @@ Anything recorded on-chain is outside our control and cannot be removed. Conside
 - **Wallet connection.** You choose whether and when to connect a wallet or use email/Google login. You can disconnect at any time.
 - **Agent wallet.** The one-time approvals used to **Enable Trading** create an agent key that **cannot withdraw funds** and can be **revoked** at any time from the interface.
 - **Cookies and local storage.** You can clear or block these in your browser, with the trade-offs noted above.
+- **Your data.** In **Settings → Account → Your data** you can download, as a JSON file, everything Dasus stores for your wallet (preferences, copy-trading records without any key material, signed consents, your Guardian ledger and fee-attribution records), and delete what is a preference or an opinion: favorites, chart drawings, traders you follow, your bug reports and your Guardian ledger. Signed consent records are kept as evidence, live copies are stopped from *My copies* (they hold funds and an agent key), and fee-attribution records are kept for accounting.
 - **Access requests.** Because we do not collect names or identity data, we may be unable to link a request to a specific individual beyond a wallet address. Where applicable, you can contact us to ask about the limited information we process.
 
 ## Data retention
