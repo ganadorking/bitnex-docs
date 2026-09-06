@@ -22,7 +22,7 @@ The **Markets** page is the catalogue of everything you can trade on Dasus: cryp
 The page is organised in three panes, each with its own filters:
 
 - **Perps** — every perpetual market. Filter by sector: **Crypto** (AI, DeFi, Gaming, Layer 1, Layer 2, Meme) or **TradFi** (Stocks, Indices, Commodities, FX, Pre-IPO).
-- **Spot** — every spot pair quoted in USDC, with market cap where supply data is available.
+- **Spot** — spot pairs quoted in USDC, with market cap where supply data is available. By default the list is **strict**: the same whitelist Hyperliquid's own app shows by default (about 50 tokens, including the tokenized stocks and ETFs). Switch **List: Strict / All** to see every token deployed on HyperCore with volume, including meme tokens named after stocks or indexes.
 - **Favorites** — the markets you starred. Click the ★ on any row to add or remove one; favorites follow your wallet across devices.
 
 Use the **search box** to jump straight to a symbol or name, and click any column header to sort — price, 24h change, volume, market cap / open interest, or funding. Clicking a header cycles descending → ascending → back to volume, the table's natural order.

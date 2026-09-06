@@ -8,7 +8,7 @@ Paste an **address**, a **transaction hash**, a **block height** or a **token** 
 
 | You look up | You get |
 | --- | --- |
-| **Address** | The account's activity on the L1 — actions, transfers and fills |
+| **Address** | The account's total value (perps, spot, HIP-3, vaults and staking) and tabs for spot balances, open positions, open orders, deposits and transfers, and recent trades |
 | **Transaction** | The action that was signed, its result, and the block it landed in |
 | **Block** | Height, timestamp and the transactions it contains |
 | **Token** | Price, market cap, circulating / total / max supply, deployer, deploy time, contract, and the genesis distribution (initial allocation, top 20 — not current holders) |
