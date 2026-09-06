@@ -14,7 +14,9 @@ Guardian Mode lets you set your own risk limits, and Dasus enforces them **befor
 
 ## Turning it on
 
-Guardian has its own page at **/guardian**. Activation is four sliders and one checkbox: max leverage, daily loss, max drawdown and your **unlock delay**. Every slider starts at its strictest value; loosening is a decision you make, not a default. Nothing turns on until you accept the terms.
+Guardian has its own page at **/guardian**. Activation opens one popup with **every rule**, grouped (your four basics, per order, exposure and budget, execution, behaviour and recovery), each with a one-sentence explanation, a switch and a slider. The four basics start at their strictest value and cannot be switched off; every other rule is off until you switch it on. Nothing turns on until you accept the terms.
+
+Later, the **Edit rules** button opens the same popup. Its footer tells you how many of your changes apply now (tightening) and how many wait for your unlock delay (loosening) before you confirm.
 
 At that moment Guardian anchors your **starting capital** — the account value at activation — and measures your drawdown against it, like a funding-firm account. You can re-anchor at any time from the page (a conscious action, never automatic).
 
@@ -47,7 +49,7 @@ Your policy is **per wallet** (each account, sub-account or vault you trade from
 | **Max size after a loss** | During the cooldown after a losing trade, an order larger than this multiple of that trade waits | Your fills (24 h window) |
 | **Recovery mode** | After a daily-loss stop, per-order limits are halved for this many hours past the reset | The day's reset |
 
-**Every rule is set from its own card**: tap the card (or the "Set a limit" tag on a rule that has none) to open its editor — a slider, the exact number, and a line telling you whether the change applies now (tightening) or after your unlock delay (loosening). A rule set to 0 is off. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
+The page lists only the rules you have switched on, as plain rows, with the cushion left for daily loss and drawdown. A rule that is off is not shown; switch it on from **Edit rules**. All amounts in USD; percentages are of your current equity (risk per trade, exposure, margin) or of the day's / anchor's equity (losses). Behaviour rules describe what happened in your fills — they never claim to know why. Removing the only stop of an open position while "stop-loss required" is on is blocked, and prices older than a minute put Guardian in "state unavailable" for the rules that depend on them.
 
 ### How the decision is made
 
@@ -99,7 +101,7 @@ Turn on **shadow mode** to let Guardian evaluate and record what it would have d
 
 ## Kill switch, evidence and deletion
 
-Three buttons at the bottom of your rules, only while Guardian is on:
+Under your rules there is an **Actions** list, only while Guardian is on. Each action says what it does next to its button:
 
 - **Kill switch**: cancels every resting order that would add exposure and starts a **24-hour voluntary pause**. It asks for confirmation once; after that it is as irrevocable as any pause. Closing stays available, and copy trading stops opening new copies.
 - **Export evidence**: downloads a JSON with your current policy, its version history and your decision record — a *policy passport* you can keep or show to anyone who asks how you trade. Only available when the policy is saved on our server.
