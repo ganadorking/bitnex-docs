@@ -138,3 +138,6 @@ Tightening a rule applies **immediately**. Loosening one — raising a limit, re
 ## Your record
 
 Every decision that stops an order is kept with its outcome, reason codes and the version of the policy that decided it, on the Guardian page and on our server. It is your record — nobody else's: you can export it and you can delete it.
+
+**Decisions from every device.** The decisions table on the Guardian page combines what this browser recorded with the ledger our server keeps for your wallet (the last 300 decisions, from any device you used). The same decision is shown once.
+
