@@ -7,7 +7,7 @@
 Guardian Mode lets you set your own risk limits, and Dasus enforces them **before you sign an order**. You decide the rules once, when you're calm; they apply every time, including the times you'd rather they didn't.
 
 {% hint style="warning" %}
-**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order that breaks your rules is signed from Dasus**, and that **your copy trading does not open new copies against them**. It never promises "you can't lose more than X".
+**Guardian is a discipline tool, not account custody.** Your funds live on the underlying protocol and you can always trade them from another client. What Guardian guarantees is that **no order that breaks your rules is signed from Dasus by you**. Copy trading is a separate system with its own limits per copy and is not governed by Guardian (see [Copy Trading](copy-trading.md)). It never promises "you can't lose more than X".
 {% endhint %}
 
 **Guardian never blocks you from closing a position, cancelling an order, adding a stop, withdrawing or revoking a key.** Only orders that open or increase exposure are evaluated. A limit that traps you in a trade would be worse than no limit at all.
@@ -109,13 +109,13 @@ In the Pro order form, as soon as you type a size on a perp, a small panel shows
 
 ## Shadow mode
 
-Turn on **shadow mode** to let Guardian evaluate and record what it would have done without stopping any order — useful while calibrating new rules. Each would-be decision shows in your record marked "shadow". Your voluntary pause is never shadowed, and copy trading is not paused by shadowed rules. Switching shadow on counts as loosening (it waits for your unlock delay); switching it off applies immediately.
+Turn on **shadow mode** to let Guardian evaluate and record what it would have done without stopping any order — useful while calibrating new rules. Each would-be decision shows in your record marked "shadow". Your voluntary pause is never shadowed. Switching shadow on counts as loosening (it waits for your unlock delay); switching it off applies immediately.
 
 ## Kill switch, evidence and deletion
 
 Under your rules there is an **Actions** list, only while Guardian is on. Each action says what it does next to its button:
 
-- **Kill switch**: cancels every resting order that would add exposure and starts a **24-hour voluntary pause**. It asks for confirmation once; after that it is as irrevocable as any pause. Closing stays available, and copy trading stops opening new copies.
+- **Kill switch**: cancels every resting order that would add exposure and starts a **24-hour voluntary pause**. It asks for confirmation once; after that it is as irrevocable as any pause. Closing stays available. Copies are not affected: they follow their own limits.
 - **Export evidence**: downloads a JSON with your current policy, its version history and your decision record — a *policy passport* you can keep or show to anyone who asks how you trade. Only available when the policy is saved on our server.
 - **Delete my record**: removes your decision record, here and on our server. Your policy and its history are kept, because the delay that protects you depends on them.
 
@@ -127,7 +127,7 @@ Tightening a rule applies **immediately**. Loosening one — raising a limit, re
 
 - Every order that opens or adds exposure from Dasus: the order form (market, limit, stop, scale, TWAP, chase), chart trading, editing open orders, Lite mode, swaps, staking swaps, prediction markets and bots.
 - **Copy engine heartbeat**: the engine that runs your copies reports every few seconds. If it goes quiet for more than two minutes, "My copies" says so in red, so you never see "copying" while nothing is being managed.
-- **Copy trading openings** on our servers: an active pause, Guardian turned off in queue, your max leverage and "stop-loss required" stop new copies from opening (copies carry no stop, so that rule pauses them — the copy's event log tells you). Your **daily loss** and **max drawdown** stop new copies too, measured from your Hyperliquid account about once a minute; if that reading fails, copies wait rather than open. Your **minimum reserve of the day** applies as well, counting the copies opened in the same cycle (not the open risk of positions you already had). Each copy keeps its own drawdown protection.
+- **Copy trading** is not governed by Guardian: each copy carries its own allocation, leverage cap, worst entry, stop-loss % and drawdown protection, and the engine enforces those instead.
 - Closing, cancelling, reducing, withdrawing and revoking: always allowed, never evaluated.
 
 ## What Guardian does not see

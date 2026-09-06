@@ -65,9 +65,9 @@ Copies are **proportional**: if the trader risks 10% of their equity on a trade,
 | **Assets** | Copy every market the trader touches, or only the ones you select. |
 | **Copy already-open positions** | On start, opens the trader's current positions proportionally **at the current price**. |
 
-### Your Guardian rules apply to copies
+### Guardian does not govern your copies
 
-If you use [Guardian Mode](guardian-mode.md), the copy engine reads the same policy you saved on our server. An active pause, Guardian turned off while the delay runs, your max leverage, "stop-loss required" (copies carry no stop), your daily loss, your max drawdown and your minimum reserve of the day all stop **new copies from opening** — never a close. For the loss rules the engine reads your account on Hyperliquid about once a minute; if it cannot read it, copies wait rather than open. The reserve counts the copies opened in the same cycle **and** the margin of the positions you already have open (the engine does not read your stop orders, so it counts the full margin of each position, which is the conservative reading). If your open positions cannot be read, new copies wait rather than open.
+[Guardian Mode](guardian-mode.md) applies to what **you** do by hand: orders you sign from the terminal, Lite, the chart or TP/SL. A copy already carries its own limits, set when you subscribe: the allocation, your maximum leverage, the worst entry you accept, the stop-loss percentage and the drawdown protection per copy. The copy engine enforces those and only those; it does not read your Guardian policy, so a Guardian pause, your daily-loss or drawdown rules and the reserve of the day never stop a copy from opening or closing. If you want a copy to stop, pause or stop it from **My copies**.
 
 Traders in the marketplace who run Guardian show a **Guardian** badge, with how long the policy has been observed and its version. It says something about discipline, nothing about returns.
 
