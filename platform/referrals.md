@@ -64,9 +64,9 @@ The referrals table lists, for every trader you brought in:
 - **Your rewards** from them
 - **Their share**, if you've set one
 
-You can search, sort and page through the table (10 rows per page). Two more tabs sit next to it: **Network**, with every code below you and what it has generated, paid and still owes you; and **Claim History**, with your payouts.
+You can search, sort and page through the table (10 rows per page). Two more tabs sit next to it: **Sub-affiliates**, with every code below you and what it has generated, paid and still owes you; and **Claim History**, with your payouts.
 
-Above the tables, **Your split and levels** shows the numbers that matter in one place: your rate, what the affiliate above you keeps, what you really keep of the platform fee, what you pass down to your own affiliates (average % and dollars so far) and what your network has earned for you.
+The four figures above the tables carry the numbers that matter: referred traders, total earned (your own plus what your sub-affiliates pass up), what you can claim now, and **your commission**, the share you really keep after the affiliate above you. Hover the underlined labels for the explanation, including what you pass down to your own sub-affiliates.
 
 ## Good to know
 
