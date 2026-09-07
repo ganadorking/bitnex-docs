@@ -128,6 +128,13 @@ Tightening a rule applies **immediately**. Loosening one — raising a limit, re
 - Every order that opens or adds exposure from Dasus: the order form (market, limit, stop, scale, TWAP, chase), chart trading, editing open orders, Lite mode, swaps, staking swaps, prediction markets and bots.
 - **Copy engine heartbeat**: the engine that runs your copies reports every few seconds. If it goes quiet for more than two minutes, "My copies" says so in red, so you never see "copying" while nothing is being managed.
 - **Copy trading** is not governed by Guardian: each copy carries its own allocation, leverage cap, worst entry, stop-loss % and drawdown protection, and the engine enforces those instead.
+- **Your figures are your manual trading.** Guardian tells the copy engine's activity apart from yours: fills and orders placed by the engine are excluded from the conduct rules (opens per day, loss streak, martingale, size after a loss) and from the daily loss, and the lots opened by your copies are subtracted from open risk, exposure, concentration and margin. Equity and distance to liquidation stay account-wide, because Hyperliquid shares collateral across everything you hold.
+
+## Where Guardian applies
+
+**Covered (checked before signing):** perps from the Pro and Lite forms, orders dragged on the chart, TP/SL and the orders panel; HIP-3 perps (stocks, indexes, forex, commodities); spot and swap; buying HYPE for staking; prediction markets.
+
+**Not covered:** copy trading (own limits per copy), other clients and apps (the Hyperliquid app, external bots, API), and deposits, withdrawals and transfers, which are not trades. When Guardian is off, the page shows no account data at all, only how it works and the button to turn it on.
 - Closing, cancelling, reducing, withdrawing and revoking: always allowed, never evaluated.
 
 ## What Guardian does not see
