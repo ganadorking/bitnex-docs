@@ -149,3 +149,7 @@ Every decision that stops an order is kept with its outcome, reason codes and th
 
 **Decisions from every device.** The decisions table on the Guardian page combines what this browser recorded with the ledger our server keeps for your wallet (the last 300 decisions, from any device you used). The same decision is shown once.
 
+
+## The activation popup
+
+Activating Guardian is one screen. Each rule is a row: its name, a one-line explanation with figures from **your** account (for example, with $10,000 of equity a 5× cap reads "with $10,000 you can open up to $50,000"), a slider with its minimum, midpoint and maximum labelled underneath, and the value in an editable box. The four basics (max leverage, daily loss, max drawdown and the duration) come first; the duration slider goes from 1 to 365 days and a notice under it states the exact date until which nothing can be loosened. Everything else sits behind **Advanced rules**. The button reads "Lock for N days"; a confirmation step then lists every active rule and asks you to accept the terms.

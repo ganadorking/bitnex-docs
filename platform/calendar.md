@@ -52,3 +52,7 @@ Pick what the card shows — **PnL**, **ROI**, or both — from the view selecto
 - [Portfolio](portfolio.md) — equity, balances and the full activity tables
 - [Entry Price & PnL](../trading/entry-price-pnl.md) — how each PnL figure is calculated
 - [Fees](fees.md) — what your trading actually cost
+
+## Reading the month's figures
+
+Each figure above the grid has a short explanation: hover or tap its label. The month's ROI is your return on capital excluding deposits and withdrawals; the total PnL adds up each day's PnL; win rate counts closed trades that ended in profit; profitable days counts days with positive PnL among days with activity; volume is the notional traded in the month. On days with activity the day number moves to the corner and the figure takes the centre of the cell. You can open the calendar of any wallet by adding `?address=0x…` to the URL: it is on-chain data, the same the explorer shows.
