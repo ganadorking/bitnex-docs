@@ -99,7 +99,9 @@ Two ways to pay less:
 
 ### Referral discount
 
-The protocol applies a **referral discount on its base fee** to accounts registered under a referrer. The Fees page includes it in the rate calculator so you can see the effect on your own rate, and shows whether it is currently active for your account.
+The protocol applies a **referral discount on its base fee** to accounts registered under a referrer: 4% off Hyperliquid's own fee for the account's first $25M of volume. The Fees page includes it in the rate calculator so you can see the effect on your own rate, and shows whether it is currently active for your account.
+
+Dasus registers your wallet under its Hyperliquid referral code automatically the first time you enable trading (the same session key that signs your orders signs the one-time `setReferrer` action; it cannot move funds). Hyperliquid accepts it only for accounts that have no referrer yet, and does not apply the discount to vaults or sub-accounts. In return, Hyperliquid pays Dasus a share of the protocol fee those accounts generate: that share comes out of Hyperliquid's fee, never on top of yours, and is independent of the platform fee described above.
 
 Referring traders on Dasus is a separate programme: referrers earn a share of the platform fee their invitees generate — see [Referrals](referrals.md).
 

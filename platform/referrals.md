@@ -74,6 +74,7 @@ The four figures above the tables carry the numbers that matter: referred trader
 - Self-referrals don't generate rewards.
 - Rewards are calculated from the platform fees your referees **actually pay**. For how those fees work, see [Fees](fees.md).
 - There is no cap on how many people you can refer.
+- Separate from this programme, your own account gets Hyperliquid's native referral discount (4% off the protocol fee) when Dasus registers it under its Hyperliquid code — see [Fees](fees.md#referral-discount).
 
 ## Related pages
 
