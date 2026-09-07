@@ -85,3 +85,7 @@ Star any market to pin it to the **favorites bar** at the top of the terminal. Y
 - New to the terminal layout? Start with the [Trading Interface](../trading/interface.md) overview.
 - Haven't enabled trading yet? Follow the [Enable Trading](../guides/enable-trading.md) guide — a one-time setup that makes all subsequent trading gasless and popup-free.
 - Prefer something simpler? Switch to [Lite Mode](lite-mode.md) anytime from the top bar.
+
+## If "Enable trading" never activates the session
+
+If MetaMask has upgraded your account to a **Smart Account** (EIP-7702), Hyperliquid cannot verify its signatures and silently ignores the session key, so trading never gets enabled from any app. Dasus detects it and shows the notice under the button. The fix is in MetaMask: Account details → *Switch back* to a standard account, then press Enable trading again.
